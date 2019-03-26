@@ -1,0 +1,668 @@
+[
+  {
+    "line": 1,
+    "elements": [
+      {
+        "line": 3,
+        "name": "performLogin",
+        "description": "",
+        "type": "background",
+        "keyword": "Background",
+        "steps": [
+          {
+            "result": {
+              "duration": 13164989940,
+              "status": "passed"
+            },
+            "line": 4,
+            "name": "the user access the Hybrid Desktop Application",
+            "match": {
+              "location": "SearchPharmacyLookUpAndVerifySubmittedInformation.user_can_access_the_Hybrid_desktop_application(String,String\u003e)"
+            },
+            "rows": [
+              {
+                "cells": [
+                  "userid",
+                  "dt79655"
+                ],
+                "line": 5
+              },
+              {
+                "cells": [
+                  "password",
+                  "shiv123"
+                ],
+                "line": 6
+              },
+              {
+                "cells": [
+                  "region",
+                  "DR1"
+                ],
+                "line": 7
+              }
+            ],
+            "keyword": "Given "
+          }
+        ]
+      },
+      {
+        "before": [
+          {
+            "result": {
+              "duration": 9576242853,
+              "status": "passed"
+            },
+            "match": {
+              "location": "HybridDesktop_SharedResource.beforeTest(Scenario)"
+            }
+          }
+        ],
+        "line": 30,
+        "name": "Pharmacy Lookup search with valid data",
+        "description": "",
+        "id": "pharmacylookup-search-verify-call-notes-call-notes;pharmacy-lookup-search-with-valid-data;;2",
+        "after": [
+          {
+            "result": {
+              "duration": 770567,
+              "status": "passed"
+            },
+            "match": {
+              "location": "HybridDesktop_SharedResource.afterTest(Scenario)"
+            }
+          }
+        ],
+        "type": "scenario",
+        "keyword": "Scenario Outline",
+        "steps": [
+          {
+            "result": {
+              "duration": 2863685300,
+              "status": "passed"
+            },
+            "line": 11,
+            "name": "User in Landing Page, he selects the application from menu",
+            "match": {
+              "location": "SearchPharmacyLookUpAndVerifySubmittedInformation.the_user_selects_the_application_from_menu_options(String,String\u003e)"
+            },
+            "matchedColumns": [
+              0
+            ],
+            "rows": [
+              {
+                "cells": [
+                  "menu",
+                  "Miscellaneous-\u003eRxNova Connect"
+                ],
+                "line": 12
+              }
+            ],
+            "keyword": "Given "
+          },
+          {
+            "result": {
+              "duration": 12060704469,
+              "status": "passed"
+            },
+            "line": 13,
+            "name": "User search for existing pharmacy by entering details in Pharmacy Lookup",
+            "match": {
+              "location": "SearchPharmacyLookUpAndVerifySubmittedInformation.the_user_search_for_the_existing_pharmacy(String,String\u003e)"
+            },
+            "matchedColumns": [
+              1,
+              2
+            ],
+            "rows": [
+              {
+                "cells": [
+                  "PharmacyNPI",
+                  "1710927462"
+                ],
+                "line": 14
+              },
+              {
+                "cells": [
+                  "RxNumber",
+                  "120005442999"
+                ],
+                "line": 15
+              }
+            ],
+            "keyword": "Then "
+          },
+          {
+            "result": {
+              "duration": 3348411579,
+              "status": "passed"
+            },
+            "output": [
+              "Completed Scenario"
+            ],
+            "line": 16,
+            "name": "Member details should be displayed",
+            "match": {
+              "location": "SearchPharmacyLookUpAndVerifySubmittedInformation.verify_member_details(String,String\u003e)"
+            },
+            "matchedColumns": [
+              3,
+              4,
+              5,
+              6,
+              7,
+              8,
+              9,
+              10,
+              11,
+              12
+            ],
+            "rows": [
+              {
+                "cells": [
+                  "MemberID",
+                  "Member ID^90413000100"
+                ],
+                "line": 17
+              },
+              {
+                "cells": [
+                  "DateOfBirth",
+                  "Date of Birth^01/01/1940"
+                ],
+                "line": 18
+              },
+              {
+                "cells": [
+                  "MemberName",
+                  "Member Name^MBRNONBRIDGECUST RWT"
+                ],
+                "line": 19
+              },
+              {
+                "cells": [
+                  "Error",
+                  "Error^"
+                ],
+                "line": 20
+              },
+              {
+                "cells": [
+                  "Date",
+                  "Date^06/06/2019"
+                ],
+                "line": 21
+              },
+              {
+                "cells": [
+                  "Time",
+                  "Time^10:27:28"
+                ],
+                "line": 22
+              },
+              {
+                "cells": [
+                  "CICSStatus",
+                  "CICS Status^PWE"
+                ],
+                "line": 23
+              },
+              {
+                "cells": [
+                  "CustID",
+                  "Cust ID^319 - 0319HUMANA"
+                ],
+                "line": 24
+              },
+              {
+                "cells": [
+                  "ClientID",
+                  "Client ID^9007 - NBRG--CLNT1 - NONBRG CLIENT--PDP"
+                ],
+                "line": 25
+              },
+              {
+                "cells": [
+                  "Group",
+                  "Group^2 - RWNBRG REGR2 DONT USE REWORK10"
+                ],
+                "line": 26
+              }
+            ],
+            "keyword": "Then "
+          }
+        ],
+        "tags": [
+          {
+            "line": 9,
+            "name": "@Functional"
+          }
+        ]
+      },
+      {
+        "line": 3,
+        "name": "performLogin",
+        "description": "",
+        "type": "background",
+        "keyword": "Background",
+        "steps": [
+          {
+            "result": {
+              "duration": 2932775,
+              "status": "passed"
+            },
+            "line": 4,
+            "name": "the user access the Hybrid Desktop Application",
+            "match": {
+              "location": "SearchPharmacyLookUpAndVerifySubmittedInformation.user_can_access_the_Hybrid_desktop_application(String,String\u003e)"
+            },
+            "rows": [
+              {
+                "cells": [
+                  "userid",
+                  "dt79655"
+                ],
+                "line": 5
+              },
+              {
+                "cells": [
+                  "password",
+                  "shiv123"
+                ],
+                "line": 6
+              },
+              {
+                "cells": [
+                  "region",
+                  "DR1"
+                ],
+                "line": 7
+              }
+            ],
+            "keyword": "Given "
+          }
+        ]
+      },
+      {
+        "before": [
+          {
+            "result": {
+              "duration": 90145,
+              "status": "passed"
+            },
+            "match": {
+              "location": "HybridDesktop_SharedResource.beforeTest(Scenario)"
+            }
+          }
+        ],
+        "line": 50,
+        "name": "Verify Header details",
+        "description": "",
+        "id": "pharmacylookup-search-verify-call-notes-call-notes;verify-header-details;;2",
+        "after": [
+          {
+            "result": {
+              "duration": 743620,
+              "status": "passed"
+            },
+            "match": {
+              "location": "HybridDesktop_SharedResource.afterTest(Scenario)"
+            }
+          }
+        ],
+        "type": "scenario",
+        "keyword": "Scenario Outline",
+        "steps": [
+          {
+            "result": {
+              "duration": 9182193608,
+              "status": "passed"
+            },
+            "line": 35,
+            "name": "User in Pharmacy Lookup Search Page and click on Blue arrow at MemberID Field",
+            "match": {
+              "location": "SearchPharmacyLookUpAndVerifySubmittedInformation.click_on_member_id_link()"
+            },
+            "keyword": "Given "
+          },
+          {
+            "result": {
+              "duration": 2652959210,
+              "status": "passed"
+            },
+            "output": [
+              "Completed Scenario"
+            ],
+            "line": 36,
+            "name": "User verifies the header details",
+            "match": {
+              "location": "SearchPharmacyLookUpAndVerifySubmittedInformation.verify_header_details(String,String\u003e)"
+            },
+            "matchedColumns": [
+              0,
+              1,
+              2,
+              3,
+              4,
+              5,
+              6,
+              7,
+              8,
+              9
+            ],
+            "rows": [
+              {
+                "cells": [
+                  "CustomerSet",
+                  "Customer Set:^Humana"
+                ],
+                "line": 37
+              },
+              {
+                "cells": [
+                  "Customer",
+                  "Customer:^0319 - 0319HUMANA"
+                ],
+                "line": 38
+              },
+              {
+                "cells": [
+                  "Client",
+                  "Client:^9007 - NBRG--CLNT1"
+                ],
+                "line": 39
+              },
+              {
+                "cells": [
+                  "Group",
+                  "Group:^RWNBRG REGR2 DONT USE REWORK10"
+                ],
+                "line": 40
+              },
+              {
+                "cells": [
+                  "Gender",
+                  "Gender:^F"
+                ],
+                "line": 41
+              },
+              {
+                "cells": [
+                  "MemberID",
+                  "Member ID:^000000090413000100"
+                ],
+                "line": 42
+              },
+              {
+                "cells": [
+                  "AltMemberID",
+                  "Alt Member ID:^000000090413000100"
+                ],
+                "line": 43
+              },
+              {
+                "cells": [
+                  "FirstName",
+                  "First Name:^RWTC4"
+                ],
+                "line": 44
+              },
+              {
+                "cells": [
+                  "LastName",
+                  "Last Name:^MBRNONBRIDGECUST"
+                ],
+                "line": 45
+              },
+              {
+                "cells": [
+                  "DOB",
+                  "DOB:^01/01/1940"
+                ],
+                "line": 46
+              }
+            ],
+            "keyword": "Then "
+          }
+        ],
+        "tags": [
+          {
+            "line": 33,
+            "name": "@Functional"
+          }
+        ]
+      },
+      {
+        "line": 3,
+        "name": "performLogin",
+        "description": "",
+        "type": "background",
+        "keyword": "Background",
+        "steps": [
+          {
+            "result": {
+              "duration": 1687741,
+              "status": "passed"
+            },
+            "line": 4,
+            "name": "the user access the Hybrid Desktop Application",
+            "match": {
+              "location": "SearchPharmacyLookUpAndVerifySubmittedInformation.user_can_access_the_Hybrid_desktop_application(String,String\u003e)"
+            },
+            "rows": [
+              {
+                "cells": [
+                  "userid",
+                  "dt79655"
+                ],
+                "line": 5
+              },
+              {
+                "cells": [
+                  "password",
+                  "shiv123"
+                ],
+                "line": 6
+              },
+              {
+                "cells": [
+                  "region",
+                  "DR1"
+                ],
+                "line": 7
+              }
+            ],
+            "keyword": "Given "
+          }
+        ]
+      },
+      {
+        "before": [
+          {
+            "result": {
+              "duration": 86616,
+              "status": "passed"
+            },
+            "match": {
+              "location": "HybridDesktop_SharedResource.beforeTest(Scenario)"
+            }
+          }
+        ],
+        "line": 71,
+        "name": "Verify Call Notes_Call Notes",
+        "description": "",
+        "id": "pharmacylookup-search-verify-call-notes-call-notes;verify-call-notes-call-notes;;2",
+        "after": [
+          {
+            "result": {
+              "duration": 568783,
+              "status": "passed"
+            },
+            "match": {
+              "location": "HybridDesktop_SharedResource.afterTest(Scenario)"
+            }
+          }
+        ],
+        "type": "scenario",
+        "keyword": "Scenario Outline",
+        "steps": [
+          {
+            "result": {
+              "duration": 31422591,
+              "status": "passed"
+            },
+            "line": 54,
+            "name": "User in Pharmacy Lookup details page",
+            "match": {
+              "location": "SearchPharmacyLookUpAndVerifySubmittedInformation.verify_pharmacy_lookup_detail()"
+            },
+            "keyword": "Given "
+          },
+          {
+            "result": {
+              "duration": 1164367262,
+              "status": "passed"
+            },
+            "line": 55,
+            "name": "User click on Call Notes icon",
+            "match": {
+              "location": "VerifyPharmacyLookUpCallNotes.user_click_on_call_notes()"
+            },
+            "keyword": "Then "
+          },
+          {
+            "result": {
+              "duration": 9107045012,
+              "status": "passed"
+            },
+            "line": 56,
+            "name": "User provides details in Add New Call Notes screen and click on Save Notes button",
+            "match": {
+              "location": "VerifyPharmacyLookUpCallNotes.add_call_notes(String,String\u003e)"
+            },
+            "matchedColumns": [
+              0,
+              1,
+              2
+            ],
+            "rows": [
+              {
+                "cells": [
+                  "AddNewType",
+                  "I - MAC"
+                ],
+                "line": 57
+              },
+              {
+                "cells": [
+                  "AddNewStatus",
+                  "1 - Resolved"
+                ],
+                "line": 58
+              },
+              {
+                "cells": [
+                  "AddNewComments",
+                  "Call Notes Comment"
+                ],
+                "line": 59
+              }
+            ],
+            "keyword": "Then "
+          },
+          {
+            "result": {
+              "duration": 85801801,
+              "status": "passed"
+            },
+            "line": 60,
+            "name": "User verifies Previous Call Notes Comments",
+            "match": {
+              "location": "VerifyPharmacyLookUpCallNotes.verify_previous_call_notes_comments(String,String\u003e)"
+            },
+            "matchedColumns": [
+              3
+            ],
+            "rows": [
+              {
+                "cells": [
+                  "PrevCallNotesComment",
+                  "Call Notes Comment"
+                ],
+                "line": 61
+              }
+            ],
+            "keyword": "Then "
+          },
+          {
+            "result": {
+              "duration": 578902625,
+              "status": "passed"
+            },
+            "output": [
+              "Completed Scenario"
+            ],
+            "line": 62,
+            "name": "User verify Previous Call Notes details",
+            "match": {
+              "location": "VerifyPharmacyLookUpCallNotes.verify_call_notes_details(String,String\u003e)"
+            },
+            "matchedColumns": [
+              4,
+              5
+            ],
+            "rows": [
+              {
+                "cells": [
+                  "Date",
+                  "\u003cDate\u003e"
+                ],
+                "line": 63
+              },
+              {
+                "cells": [
+                  "Time",
+                  "\u003cTime\u003e"
+                ],
+                "line": 64
+              },
+              {
+                "cells": [
+                  "Type",
+                  "Type^I - MAC"
+                ],
+                "line": 65
+              },
+              {
+                "cells": [
+                  "Status",
+                  "Status^1 - Resolved"
+                ],
+                "line": 66
+              },
+              {
+                "cells": [
+                  "UserID",
+                  "\u003cUserID\u003e"
+                ],
+                "line": 67
+              }
+            ],
+            "keyword": "Then "
+          }
+        ],
+        "tags": [
+          {
+            "line": 52,
+            "name": "@Functional"
+          }
+        ]
+      }
+    ],
+    "name": "PharmacyLookup Search verify Call Notes Call Notes",
+    "description": "",
+    "id": "pharmacylookup-search-verify-call-notes-call-notes",
+    "keyword": "Feature",
+    "uri": "features/PharmacyLookup/PharmacyLookup_CallNotes_Verify_CallNotes.feature"
+  }
+]

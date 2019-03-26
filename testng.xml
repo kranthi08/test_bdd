@@ -1,0 +1,94 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite name="Suite" parallel="classes">
+ <!--test name="PharmacyLookup_Search_VerifySubmittedInformationFeature">
+    <classes>
+      <class name="DSTPS.Automation.HybridDesktop.PharmacyLookupAutomation.runners.SearchPharmacyLookUpAndVerifySubmittedInformation_TestRunner"/>
+    </classes>
+  </test--> <!-- Test -->
+  <!--test name="PharmacyLookup_Search_InvalidDataFeature">
+    <classes>
+      <class name="DSTPS.Automation.HybridDesktop.PharmacyLookupAutomation.runners.SearchPharmacyLookUpWithInvalidData_TestRunner"/>
+    </classes>
+  </test--> <!-- Test -->
+  <!--test name="PharmacyLookup_Reimbursement_Verify_ReimbursementResultsFeature">
+    <classes>
+      <class name="DSTPS.Automation.HybridDesktop.PharmacyLookupAutomation.runners.VerifyPharmacyLookUpReimbursementResults_TestRunner"/>
+    </classes>
+  </test--> <!-- Test -->
+  <!--test name="PharmacyLookup_Reimbursement_Verify_CallNotesFeature">
+    <classes>
+      <class name="DSTPS.Automation.HybridDesktop.PharmacyLookupAutomation.runners.VerifyPharmacyLookUpReimbursementCallNotes_TestRunner"/>
+    </classes>
+  </test--> <!-- Test -->
+  <!--test name="PharmacyLookup_Pharmacy_Verify_PharmacyResultsFeature">
+    <classes>
+      <class name="DSTPS.Automation.HybridDesktop.PharmacyLookupAutomation.runners.VerifyPharmacyLookUpPharmacyResults_TestRunner"/>
+    </classes>
+  </test--> <!-- Test -->
+  <!--test name="PharmacyLookup_Pharmacy_Verify_CallNotesFeature">
+    <classes>
+      <class name="DSTPS.Automation.HybridDesktop.PharmacyLookupAutomation.runners.VerifyPharmacyLookUpPharmacyCallNotes_TestRunner"/>
+    </classes>
+  </test--> <!-- Test -->
+  <!--test name="PharmacyLookup_Formulary_Verify_DrugResultsFeature">
+    <classes>
+      <class name="DSTPS.Automation.HybridDesktop.PharmacyLookupAutomation.runners.VerifyPharmacyLookUpFormularyDrugResults_TestRunner"/>
+    </classes>
+  </test--> <!-- Test -->
+  <!--test name="PharmacyLookup_Formulary_Verify_GeneralInformationFeature">
+    <classes>
+      <class name="DSTPS.Automation.HybridDesktop.PharmacyLookupAutomation.runners.VerifyPharmacyLookUpFormularyGeneralInformation_TestRunner"/>
+    </classes>
+  </test--> <!-- Test -->
+  <!--test name="PharmacyLookup_Formulary_Verify_MinMaxDoseFeature">
+    <classes>
+      <class name="DSTPS.Automation.HybridDesktop.PharmacyLookupAutomation.runners.VerifyPharmacyLookUpFormularyMinMaxDose_TestRunner"/>
+    </classes>
+  </test--> <!-- Test -->
+  <!--test name="PharmacyLookup_Formulary_Verify_CallNotesFeature">
+    <classes>
+      <class name="DSTPS.Automation.HybridDesktop.PharmacyLookupAutomation.runners.VerifyPharmacyLookUpFormularyCallNotes_TestRunner"/>
+    </classes>
+  </test--> <!-- Test -->
+  <!--test name="PharmacyLookup_Authorization_Verify_AuthResultsFeature">
+    <classes>
+      <class name="DSTPS.Automation.HybridDesktop.PharmacyLookupAutomation.runners.VerifyPharmacyLookUpAuthResults_TestRunner"/>
+    </classes>
+  </test--> <!-- Test -->
+ <!--test name="PharmacyLookup_Authorization_Verify_GeneralInformationFeature">
+    <classes>
+      <class name="DSTPS.Automation.HybridDesktop.PharmacyLookupAutomation.runners.VerifyPharmacyLookUpAuthorizationGeneralInformation_TestRunner"/>
+    </classes>
+  </test-->
+  <!--test name="PharmacyLookup_Authorization_Verify_NotesAndHistoryFeature">
+    <classes>
+      <class name="DSTPS.Automation.HybridDesktop.PharmacyLookupAutomation.runners.VerifyPharmacyLookUpAuthorizationNotesAndHistory_TestRunner"/>
+    </classes>
+  </test--> <!-- Test -->  
+  <!--test name="PharmacyLookup_Authorization_Verify_CallNotesFeature">
+    <classes>
+      <class name="DSTPS.Automation.HybridDesktop.PharmacyLookupAutomation.runners.VerifyPharmacyLookUpAuthorizationCallNotes_TestRunner"/>
+    </classes>
+  </test--> <!-- Test -->
+  <!--test name="PharmacyLookup_BenefitsEligibility_Verify_BAndEDetailFeature">
+    <classes>
+      <class name="DSTPS.Automation.HybridDesktop.PharmacyLookupAutomation.runners.VerifyPharmacyLookUpBenefitsAndEligibilityDetail_TestRunner"/>
+    </classes>
+  </test--> <!-- Test -->
+  <!--test name="PharmacyLookup_BenefitsEligibility_Verify_DualCoverageFeature">
+    <classes>
+      <class name="DSTPS.Automation.HybridDesktop.PharmacyLookupAutomation.runners.VerifyPharmacyLookUpBenefitsAndEligibilityDualCoverage_TestRunner"/>
+    </classes>
+  </test--> <!-- Test -->    
+  <!--test name="PharmacyLookup_BenefitsEligibility_Verify_CallNotesFeature">
+    <classes>
+      <class name="DSTPS.Automation.HybridDesktop.PharmacyLookupAutomation.runners.VerifyPharmacyLookUpBenefitsEligibilityCallNotes_TestRunner"/>
+    </classes>
+  </test--> <!-- Test -->
+  <test name="PharmacyLookup_CallNotes_Verify_CallNotesFeature">
+    <classes>
+      <class name="DSTPS.Automation.HybridDesktop.PharmacyLookupAutomation.runners.VerifyPharmacyLookUpCallNotes_TestRunner"/>
+    </classes>
+  </test> <!-- Test -->             
+</suite>
