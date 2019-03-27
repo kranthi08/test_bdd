@@ -1,4 +1,8 @@
+<<<<<<< HEAD
 #Author : DSTPS Automation
+=======
+#Author : Please Added Author name
+>>>>>>> refs/remotes/origin/Development
 
 Feature: PharmacyLookup Search verify Authorization Auth Results
 
