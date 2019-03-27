@@ -81,6 +81,7 @@ public class PharmacyLookup_Authorization_CallNotes_Steps {
 		authPrevCallNotesSoft.assertEquals(strActPrevCallNotesComments, strExpPrevCallNotesComments);
 		authPrevCallNotesSoft.assertAll();
 		authPrevCallNotesSoft = null;
+		return;
 	}
 	
 	public void verifyCallNotesDetails(Map<String,String> callNotesDetails) throws Throwable {
