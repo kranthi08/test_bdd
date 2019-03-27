@@ -1,5 +1,3 @@
-#Author: DSTPS AUTOMATATION
-
 Feature: PharmacyLookup Search verify Authorization Auth Results
 
   Background: performLogin
