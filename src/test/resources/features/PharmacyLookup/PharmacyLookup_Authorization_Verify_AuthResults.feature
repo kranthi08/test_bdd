@@ -1,5 +1,3 @@
-#Author: Author Name
-
 Feature: PharmacyLookup Search verify Authorization Auth Results
 
   Background: performLogin
