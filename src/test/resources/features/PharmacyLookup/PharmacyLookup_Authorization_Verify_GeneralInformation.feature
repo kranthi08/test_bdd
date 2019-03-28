@@ -1,3 +1,5 @@
+#Author: DSTPS Automation team - Hyd
+
 Feature: PharmacyLookup Search verify Authorization General Information
 
   Background: performLogin
