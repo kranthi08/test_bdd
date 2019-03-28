@@ -1,3 +1,5 @@
+# Please add another scenario to cover XYZ feature with Examples - Sreenu
+
 Feature: PharmacyLookup Search verify Submitted Information
 
   Background: performLogin
