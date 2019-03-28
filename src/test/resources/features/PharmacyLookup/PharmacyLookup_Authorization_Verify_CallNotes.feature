@@ -18,7 +18,7 @@ Feature: PharmacyLookup Search verify Authorization Call Notes
       | DateOfBirth | <DateOfBirth> |
       | MemberName  | <MemberName>  |
       | Error       | <Error>      	|
-      | Date				| <Date>      	|
+      | Date		| <Date>      	|
       | Time        | <Time>        |
       | CICSStatus  | <CICSStatus>  |
       | CustID      | <CustID>      |
