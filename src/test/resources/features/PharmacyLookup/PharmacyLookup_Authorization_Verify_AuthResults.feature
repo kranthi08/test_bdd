@@ -1,4 +1,3 @@
-# Offshore Testing
 Feature: PharmacyLookup Search verify Authorization Auth Results
 
   Background: performLogin
