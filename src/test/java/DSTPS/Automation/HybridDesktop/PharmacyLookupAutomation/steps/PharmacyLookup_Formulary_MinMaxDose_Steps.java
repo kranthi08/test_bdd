@@ -67,7 +67,6 @@ public class PharmacyLookup_Formulary_MinMaxDose_Steps {
 			minMaxDoseSoft.assertEquals(pharmacyLookup_Formulary_MinMaxDoseSelector.actMinMaxDetails.get(i), expMinMaxDetails.get(i));
 		}		
 		minMaxDoseSoft.assertAll();
-		minMaxDoseSoft = null;
 	}
 }
 

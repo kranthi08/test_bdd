@@ -62,7 +62,6 @@ public class PharmacyLookup_Authorization_AuthResults_Steps {
 			authResultsSoft.assertEquals(pharmacyLookup_Authorization_AuthResultsSelector.actAuthResults.get(i), expAuthResults.get(i));
 		}		
 		authResultsSoft.assertAll();
-		authResultsSoft = null;
 	}	
 }
 

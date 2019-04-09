@@ -3,7 +3,7 @@ Feature: PharmacyLookup Search verify Authorization Auth Results
   Background: performLogin
     Given the user access the Hybrid Desktop Application
       | userid   | dt79655 |
-      | password | shiv123 |
+      | password | avaya12 |
       | region   | DR1     |
 
   @Functional
@@ -53,12 +53,6 @@ Feature: PharmacyLookup Search verify Authorization Auth Results
   Scenario Outline: Verify Authorization Auth Results 
     Given User in Pharmacy Lookup details page    
     Then User click on Authorization icon     
-    #Then User provides Auth details and click on Search
-    #
-     #| AuthID					   | <AuthID>            |         
-     #| AuthType					 | <AuthType>       	 |
-     #| Status						 | <Status>            |
-     #| RxNumber  				 | <RxNumber>          |     
     Then User verifies the Auth Results details     
       | AuthID				| <AuthID>        |         
       | AuthType			| <AuthType>      |

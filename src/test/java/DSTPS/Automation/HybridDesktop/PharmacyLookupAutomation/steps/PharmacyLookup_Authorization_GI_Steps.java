@@ -176,7 +176,6 @@ public class PharmacyLookup_Authorization_GI_Steps {
 			authGenInfoSoft.assertEquals(pharmacyLookup_Authorization_GISelector.actAuthGenInfoDetails.get(i), expAuthGenInfoDetails.get(i));
 		}		
 		authGenInfoSoft.assertAll();
-		authGenInfoSoft = null;
 	}
 }
 

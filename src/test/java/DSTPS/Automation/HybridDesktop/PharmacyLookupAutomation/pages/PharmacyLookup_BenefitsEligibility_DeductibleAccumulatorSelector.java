@@ -28,7 +28,7 @@ public class PharmacyLookup_BenefitsEligibility_DeductibleAccumulatorSelector {
 	private void  PharmacyLookup_BenefitsEligibility_DeductibleAccumulator_Objects()
 	{		
 		BE_DEDUCTIBLEACCUMULATOR_LINK = By.linkText("Deductible & Accumulators");
-		BE_ACCUMULATORBENEFITPERIOD_TABLE = By.xpath("//table[@class='ui-datatable ui-widget fl custom-dt benefits-accumulator-period-dt']");
+		BE_ACCUMULATORBENEFITPERIOD_TABLE = By.xpath("//*[@class='ui-datatable ui-widget fl custom-dt benefits-accumulator-period-dt']");
 		BE_ACCUMULATORCOMPONENT_TABLE = By.id("benefitsSelectionForm:benefitsAccordionPanel:accumulatorComponentPanel");
 		BE_ACCUMULATORAMOUNTS_TABLE = By.id("benefitsSelectionForm:benefitsAccordionPanel:accumulatorSummaryAmountsPanel");
 		BE_INDIVIDUALACCUMULATIONS_TABLE = By.xpath("//table[@class='fl custom-tbls accumulator-amount-tbl']");
@@ -72,11 +72,11 @@ public class PharmacyLookup_BenefitsEligibility_DeductibleAccumulatorSelector {
 	}
 	
 	public void BenefitsEligibility_AccumulatorComponent_End(String strACEnd) throws Throwable{
-		actBEDeductAccumDetails.add(utils.RxNovaConnect_WebTable_VerifySingleRowColumnData(BE_ACCUMULATORBENEFITPERIOD_TABLE,strACEnd));
+		actBEDeductAccumDetails.add(utils.RxNovaConnect_WebTable_VerifySingleRowColumnData(BE_ACCUMULATORCOMPONENT_TABLE,strACEnd));
 	}
 	
 	public void BenefitsEligibility_AccumulatorComponent_Indicator(String strACIndicator) throws Throwable{
-		actBEDeductAccumDetails.add(utils.RxNovaConnect_WebTable_VerifySingleRowColumnData(BE_ACCUMULATORBENEFITPERIOD_TABLE,strACIndicator));
+		actBEDeductAccumDetails.add(utils.RxNovaConnect_WebTable_VerifySingleRowColumnData(BE_ACCUMULATORCOMPONENT_TABLE,strACIndicator));
 	}
 	
 	// Accumulator Amounts	
@@ -120,65 +120,65 @@ public class PharmacyLookup_BenefitsEligibility_DeductibleAccumulatorSelector {
 	// Individual Accumulations	
 	
 	public void BenefitsEligibility_IndividualAccumulations_IndividualLimit(String strIAIndividualLimit) throws Throwable{
-		actBEDeductAccumDetails.add(utils.RxNovaConnect_WebTable_VerifySingleRowColumnData(BE_INDIVIDUALACCUMULATIONS_TABLE,strIAIndividualLimit));
+		actBEDeductAccumDetails.add(utils.RxNovaConnect_WebTable_VerifyRowData(BE_INDIVIDUALACCUMULATIONS_TABLE,strIAIndividualLimit));
 	}
 	
 	public void BenefitsEligibility_IndividualAccumulations_MemberPaid(String strIAMemberPaid) throws Throwable{
-		actBEDeductAccumDetails.add(utils.RxNovaConnect_WebTable_VerifySingleRowColumnData(BE_INDIVIDUALACCUMULATIONS_TABLE,strIAMemberPaid));
+		actBEDeductAccumDetails.add(utils.RxNovaConnect_WebTable_VerifyRowData(BE_INDIVIDUALACCUMULATIONS_TABLE,strIAMemberPaid));
 	}
 	
 	public void BenefitsEligibility_IndividualAccumulations_AmountToMeet(String strIAAmountToMeet) throws Throwable{
-		actBEDeductAccumDetails.add(utils.RxNovaConnect_WebTable_VerifySingleRowColumnData(BE_INDIVIDUALACCUMULATIONS_TABLE,strIAAmountToMeet));
+		actBEDeductAccumDetails.add(utils.RxNovaConnect_WebTable_VerifyRowData(BE_INDIVIDUALACCUMULATIONS_TABLE,strIAAmountToMeet));
 	}
 	
 	public void BenefitsEligibility_IndividualAccumulations_PlanPaid(String strIAPlanPaid) throws Throwable{
-		actBEDeductAccumDetails.add(utils.RxNovaConnect_WebTable_VerifySingleRowColumnData(BE_INDIVIDUALACCUMULATIONS_TABLE,strIAPlanPaid));
+		actBEDeductAccumDetails.add(utils.RxNovaConnect_WebTable_VerifyRowData(BE_INDIVIDUALACCUMULATIONS_TABLE,strIAPlanPaid));
 	}
 	
 	public void BenefitsEligibility_IndividualAccumulations_ExcludedAmount(String strIAExcludedAmount) throws Throwable{
-		actBEDeductAccumDetails.add(utils.RxNovaConnect_WebTable_VerifySingleRowColumnData(BE_INDIVIDUALACCUMULATIONS_TABLE,strIAExcludedAmount));
+		actBEDeductAccumDetails.add(utils.RxNovaConnect_WebTable_VerifyRowData(BE_INDIVIDUALACCUMULATIONS_TABLE,strIAExcludedAmount));
 	}
 	
 	public void BenefitsEligibility_IndividualAccumulations_PLRO(String strIAPLRO) throws Throwable{
-		actBEDeductAccumDetails.add(utils.RxNovaConnect_WebTable_VerifySingleRowColumnData(BE_INDIVIDUALACCUMULATIONS_TABLE,strIAPLRO));
+		actBEDeductAccumDetails.add(utils.RxNovaConnect_WebTable_VerifyRowData(BE_INDIVIDUALACCUMULATIONS_TABLE,strIAPLRO));
 	}
 	
 	public void BenefitsEligibility_IndividualAccumulations_Claims(String strIAClaims) throws Throwable{
-		actBEDeductAccumDetails.add(utils.RxNovaConnect_WebTable_VerifySingleRowColumnData(BE_INDIVIDUALACCUMULATIONS_TABLE,strIAClaims));
+		actBEDeductAccumDetails.add(utils.RxNovaConnect_WebTable_VerifyRowData(BE_INDIVIDUALACCUMULATIONS_TABLE,strIAClaims));
 	}
 	
 	public void BenefitsEligibility_IndividualAccumulations_MetDate(String strIAMetDate) throws Throwable{
-		actBEDeductAccumDetails.add(utils.RxNovaConnect_WebTable_VerifySingleRowColumnData(BE_INDIVIDUALACCUMULATIONS_TABLE,strIAMetDate));
+		actBEDeductAccumDetails.add(utils.RxNovaConnect_WebTable_VerifyRowData(BE_INDIVIDUALACCUMULATIONS_TABLE,strIAMetDate));
 	}
 	
 	// Family Accumulations
 	
 	public void BenefitsEligibility_FamilyAccumulations_FamilyLimit(String strFAFamilyLimit) throws Throwable{
-		actBEDeductAccumDetails.add(utils.RxNovaConnect_WebTable_VerifySingleRowColumnData(BE_FAMILYACCUMULATIONS_TABLE,strFAFamilyLimit));
+		actBEDeductAccumDetails.add(utils.RxNovaConnect_WebTable_VerifyRowData(BE_FAMILYACCUMULATIONS_TABLE,strFAFamilyLimit));
 	}
 	
 	public void BenefitsEligibility_FamilyAccumulations_FamilyPaid(String strFAFamilyPaid) throws Throwable{
-		actBEDeductAccumDetails.add(utils.RxNovaConnect_WebTable_VerifySingleRowColumnData(BE_FAMILYACCUMULATIONS_TABLE,strFAFamilyPaid));
+		actBEDeductAccumDetails.add(utils.RxNovaConnect_WebTable_VerifyRowData(BE_FAMILYACCUMULATIONS_TABLE,strFAFamilyPaid));
 	}
 	
 	public void BenefitsEligibility_FamilyAccumulations_AmountToMeet(String strFAAmountToMeet) throws Throwable{
-		actBEDeductAccumDetails.add(utils.RxNovaConnect_WebTable_VerifySingleRowColumnData(BE_FAMILYACCUMULATIONS_TABLE,strFAAmountToMeet));
+		actBEDeductAccumDetails.add(utils.RxNovaConnect_WebTable_VerifyRowData(BE_FAMILYACCUMULATIONS_TABLE,strFAAmountToMeet));
 	}
 	
 	public void BenefitsEligibility_FamilyAccumulations_PlanPaid(String strFAPlanPaid) throws Throwable{
-		actBEDeductAccumDetails.add(utils.RxNovaConnect_WebTable_VerifySingleRowColumnData(BE_FAMILYACCUMULATIONS_TABLE,strFAPlanPaid));
+		actBEDeductAccumDetails.add(utils.RxNovaConnect_WebTable_VerifyRowData(BE_FAMILYACCUMULATIONS_TABLE,strFAPlanPaid));
 	}
 	
 	public void BenefitsEligibility_FamilyAccumulations_ExcludedAmount(String strFAExcludedAmount) throws Throwable{
-		actBEDeductAccumDetails.add(utils.RxNovaConnect_WebTable_VerifySingleRowColumnData(BE_FAMILYACCUMULATIONS_TABLE,strFAExcludedAmount));
+		actBEDeductAccumDetails.add(utils.RxNovaConnect_WebTable_VerifyRowData(BE_FAMILYACCUMULATIONS_TABLE,strFAExcludedAmount));
 	}
 	
 	public void BenefitsEligibility_FamilyAccumulations_Claims(String strFAClaims) throws Throwable{
-		actBEDeductAccumDetails.add(utils.RxNovaConnect_WebTable_VerifySingleRowColumnData(BE_FAMILYACCUMULATIONS_TABLE,strFAClaims));
+		actBEDeductAccumDetails.add(utils.RxNovaConnect_WebTable_VerifyRowData(BE_FAMILYACCUMULATIONS_TABLE,strFAClaims));
 	}
 	
 	public void BenefitsEligibility_FamilyAccumulations_MetDate(String strFAMetDate) throws Throwable{
-		actBEDeductAccumDetails.add(utils.RxNovaConnect_WebTable_VerifySingleRowColumnData(BE_INDIVIDUALACCUMULATIONS_TABLE,strFAMetDate));
+		actBEDeductAccumDetails.add(utils.RxNovaConnect_WebTable_VerifyRowData(BE_INDIVIDUALACCUMULATIONS_TABLE,strFAMetDate));
 	}	
 	
 	//~~~~~~~~~~~~~~~~~~~~~~~~~~Benefits & Eligibility Deductible & Accumulators Operations~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~

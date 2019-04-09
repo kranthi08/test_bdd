@@ -153,7 +153,6 @@ public class PharmacyLookup_BenefitsEligibility_Detail_Steps {
 			benefitsEligibilityDetailSoft.assertEquals(pharmacyLookup_BenefitsEligibility_DetailSelector.actBenefitsEligibilityDetail.get(i), expBenefitsEligibilityDetail.get(i));
 		}		
 		benefitsEligibilityDetailSoft.assertAll();
-		benefitsEligibilityDetailSoft = null;
 	}
 	
 	
@@ -232,7 +231,6 @@ public class PharmacyLookup_BenefitsEligibility_Detail_Steps {
 			additionalEligibilityDatesSoft.assertEquals(pharmacyLookup_BenefitsEligibility_DetailSelector.actAdditionalEligibilityDates.get(i), expAdditionalEligibilityDates.get(i));
 		}		
 		additionalEligibilityDatesSoft.assertAll();
-		additionalEligibilityDatesSoft = null;
 	}
 	
 	
@@ -281,7 +279,6 @@ public class PharmacyLookup_BenefitsEligibility_Detail_Steps {
 			memberIDDetailsSoft.assertEquals(pharmacyLookup_BenefitsEligibility_DetailSelector.actMemberIDDetails.get(i), expMemberIDDetails.get(i));
 		}		
 		memberIDDetailsSoft.assertAll();
-		memberIDDetailsSoft = null;
 	}
 }
 

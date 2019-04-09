@@ -70,7 +70,6 @@ public class PharmacyLookup_Pharmacy_CallNotes_Steps {
 		
 		pharmacyCallNotesResultSoft.assertEquals(afterTotalResultsCount, beforeTotalResultsCount+1);
 		pharmacyCallNotesResultSoft.assertAll();
-		pharmacyCallNotesResultSoft = null;
 	}
 	
 	public void verifyPreviousCallNotesComments(Map<String,String> previousCallNotesComments)throws Throwable {
@@ -80,7 +79,6 @@ public class PharmacyLookup_Pharmacy_CallNotes_Steps {
 		String strActPrevCallNotesComments = arrActPrevCallNotes[1];
 		pharmacyPrevCallNotesSoft.assertEquals(strActPrevCallNotesComments, strExpPrevCallNotesComments);
 		pharmacyPrevCallNotesSoft.assertAll();
-		pharmacyPrevCallNotesSoft = null;
 	}
 	
 	public void verifyCallNotesDetails(Map<String,String> callNotesDetails) throws Throwable {
@@ -98,7 +96,6 @@ public class PharmacyLookup_Pharmacy_CallNotes_Steps {
 			pharmacyCallNotesDetailsSoft.assertEquals(pharmacyLookup_Pharmacy_CallNotesSelector.actCallNotesDetails.get(i), expCallNotesDetails.get(i));
 		}		
 		pharmacyCallNotesDetailsSoft.assertAll();
-		pharmacyCallNotesDetailsSoft = null;
 	}
 }
 

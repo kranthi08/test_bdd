@@ -184,7 +184,6 @@ public class PharmacyLookup_Formulary_GI_Steps {
 			formularyGenInfoSoft.assertEquals(pharmacyLookup_Formulary_GISelector.actFormularyGenInfoDetails.get(i), expFormularyGenInfoDetails.get(i));
 		}		
 		formularyGenInfoSoft.assertAll();
-		formularyGenInfoSoft = null;
 	}
 }
 

@@ -1,12 +1,10 @@
-# Please add another scenario to cover XYZ feature with Examples - Sreenu
-
 Feature: PharmacyLookup Search verify Submitted Information
 
   Background: performLogin
     Given the user access the Hybrid Desktop Application
-      | userid   | dt79655 |
-      | password | shiv123 |
-      | region   | DR1     |
+      | userid   | |
+      | password | |
+      | region   | |
 
   @Functional
   Scenario Outline: Pharmacy Lookup Search with valid data

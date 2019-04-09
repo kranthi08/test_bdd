@@ -70,7 +70,6 @@ public class PharmacyLookup_Reimbursement_CallNotes_Steps {
 		
 		reimbCallNotesResultSoft.assertEquals(afterTotalResultsCount, beforeTotalResultsCount+1);
 		reimbCallNotesResultSoft.assertAll();
-		reimbCallNotesResultSoft = null;
 	}
 	
 	public void verifyPreviousCallNotesComments(Map<String,String> previousCallNotesComments)throws Throwable {
@@ -80,7 +79,6 @@ public class PharmacyLookup_Reimbursement_CallNotes_Steps {
 		String strActPrevCallNotesComments = arrActPrevCallNotes[1];
 		reimbPrevCallNotesSoft.assertEquals(strActPrevCallNotesComments, strExpPrevCallNotesComments);
 		reimbPrevCallNotesSoft.assertAll();
-		reimbPrevCallNotesSoft = null;
 	}
 	
 	public void verifyCallNotesDetails(Map<String,String> callNotesDetails) throws Throwable {
@@ -98,7 +96,6 @@ public class PharmacyLookup_Reimbursement_CallNotes_Steps {
 			reimbCallNotesDetailsSoft.assertEquals(pharmacyLookup_Reimbursement_CallNotesSelector.actCallNotesDetails.get(i), expCallNotesDetails.get(i));
 		}		
 		reimbCallNotesDetailsSoft.assertAll();
-		reimbCallNotesDetailsSoft = null;
 	}
 }
 

@@ -1,10 +1,10 @@
 Feature: PharmacyLookup Search verify Formulary Min Max Dose
 
-  Background: performLogin
+    Background: performLogin
     Given the user access the Hybrid Desktop Application
-      | userid   | dt79655 |
-      | password | shiv123 |
-      | region   | DR1     |
+      | userid   | |
+      | password | |
+      | region   | |
 
   @Functional
   Scenario Outline: Pharmacy Lookup search with valid data
@@ -54,7 +54,6 @@ Feature: PharmacyLookup Search verify Formulary Min Max Dose
     Given User in Pharmacy Lookup details page    
     Then User click on Formulary icon     
     Then User click on Min Max Dose     
-    #Then User provides Age range details and click on Go     
     Then User verifies the Min Max Dose details     
       | MinDailyDose       | <MinDailyDose>      |         
       | MaxDailyDose	     | <MaxDailyDose>      |

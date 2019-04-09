@@ -55,7 +55,6 @@ public class PharmacyLookup_BenefitsEligibility_DualCoverage_Steps {
 			dualCoverageDetailsSoft.assertEquals(pharmacyLookup_BenefitsEligibility_DualCoverageSelector.actBEDualCoverageDetails.get(i), expBEDualCoverageDetails.get(i));
 		}		
 		dualCoverageDetailsSoft.assertAll();
-		dualCoverageDetailsSoft = null;
 	}
 }
 

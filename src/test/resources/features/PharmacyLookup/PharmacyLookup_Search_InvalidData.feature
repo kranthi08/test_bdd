@@ -1,10 +1,10 @@
 Feature: PharmacyLookup Search with Invalid Data
 
-  Background: performLogin
+   Background: performLogin
     Given the user access the Hybrid Desktop Application
-      | userid   | dt79655 |
-      | password | shiv123 |
-      | region   | DR1     |
+      | userid   | |
+      | password | |
+      | region   | |
 
   @Functional
   Scenario Outline: Pharmacy Lookup Search with Invalid Data

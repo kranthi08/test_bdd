@@ -1,4 +1,3 @@
-// Test change
 package DSTPS.Automation.HybridDesktop.PharmacyLookupAutomation.stepDefinitions;
 
 import java.util.Map;

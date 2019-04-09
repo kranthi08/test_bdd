@@ -34,7 +34,7 @@ public class VerifyPharmacyLookUpReimbursementCallNotes {
 	
 	@Then("^User click on Call Notes in Reimbursement screen$")
 	public void user_click_on_call_notes() throws Throwable{
-		pharmacyLookup_Details_Steps.verifyFormulary();
+		pharmacyLookup_Details_Steps.verifyReimbursement();
 		pharmacyLookup_Reimbursement_CallNotes_Steps.clickOnCallNotes();
 	}
 	

@@ -35,10 +35,8 @@ public class PharmacyLookup_Reimbursement_Results_Steps {
 	public void verifyReimbursementResults(Map<String,String> reimbursementResults)throws Throwable {
 		String strRPAccount = reimbursementResults.get("RPAccount");
 		String strRPPayment = reimbursementResults.get("RPPayment");		
-		String strRPStatus = reimbursementResults.get("RPStatus");		
 		String strRPPaymentDate = reimbursementResults.get("RPPaymentDate");
 		String strRPFinancialDate = reimbursementResults.get("RPFinancialDate");
-		String strRPReplacement = reimbursementResults.get("RPReplacement");
 		String strRPOriginalPayment = reimbursementResults.get("RPOriginalPayment");
 		String strRPAmount = reimbursementResults.get("RPAmount");
 		String strRPName = reimbursementResults.get("RPName");
@@ -70,10 +68,8 @@ public class PharmacyLookup_Reimbursement_Results_Steps {
 		
 		expReimbursementResults.add(strRPAccount);
 		expReimbursementResults.add(strRPPayment);
-		//expReimbursementResults.add(strRPStatus);
 		expReimbursementResults.add(strRPPaymentDate);
 		expReimbursementResults.add(strRPFinancialDate);
-		//expReimbursementResults.add(strRPReplacement);
 		expReimbursementResults.add(strRPOriginalPayment);
 		expReimbursementResults.add(strRPAmount);
 		expReimbursementResults.add(strRPName);
@@ -104,10 +100,8 @@ public class PharmacyLookup_Reimbursement_Results_Steps {
 		
 		pharmacyLookup_Reimbursement_ResultsSelector.Reimbursement_Paid_Account(strRPAccount);
 		pharmacyLookup_Reimbursement_ResultsSelector.Reimbursement_Paid_Payment(strRPPayment);
-		//pharmacyLookup_Reimbursement_ResultsSelector.Reimbursement_Paid_Status(strRPStatus);
 		pharmacyLookup_Reimbursement_ResultsSelector.Reimbursement_Paid_PaymentDate(strRPPaymentDate);
 		pharmacyLookup_Reimbursement_ResultsSelector.Reimbursement_Paid_FinancialDate(strRPFinancialDate);
-		//pharmacyLookup_Reimbursement_ResultsSelector.Reimbursement_Paid_Replacement(strRPReplacement);
 		pharmacyLookup_Reimbursement_ResultsSelector.Reimbursement_Paid_OriginalPayment(strRPOriginalPayment);
 		pharmacyLookup_Reimbursement_ResultsSelector.Reimbursement_Paid_Amount(strRPAmount);
 		pharmacyLookup_Reimbursement_ResultsSelector.Reimbursement_PayeeInfo_Name(strRPName);
@@ -141,7 +135,6 @@ public class PharmacyLookup_Reimbursement_Results_Steps {
 			reimbResultsSoft.assertEquals(pharmacyLookup_Reimbursement_ResultsSelector.actReimbursementResults.get(i), expReimbursementResults.get(i));
 		}		
 		reimbResultsSoft.assertAll();
-		reimbResultsSoft = null;
 	}	
 }
 

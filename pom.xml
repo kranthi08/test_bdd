@@ -237,17 +237,17 @@
 		    	     <configuration>
 		    	     	<systemPropertyVariables>
 		    	     		<MavenRegion>DR1</MavenRegion>
-		    	     		<MavenUsername>useruserid</MavenUsername>
-		    	     		<MavenPassword>userpassword</MavenPassword>		    	     		
+		    	     		<MavenUsername>csre</MavenUsername>
+		    	     		<MavenPassword>tintin1</MavenPassword>		    	     		
 		    	     	</systemPropertyVariables>
 		                 <suiteXmlFiles>
             				<suiteXmlFile>testng.xml</suiteXmlFile>
           				</suiteXmlFiles>
           				<properties>
-          					<property>
+          					<!-- <property>
           						<name>testnames</name>
           						<value>AccumulatorFeatures</value>
-          					</property>
+          					</property> -->
           				</properties>
 		             </configuration>	
 		</plugin>

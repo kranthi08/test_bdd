@@ -37,37 +37,37 @@ public class PharmacyLookup_BenefitsEligibility_DeductibleAccumulator_Steps {
 	}
 	
 	public void verifyDeductibleAccumulatorDetails(Map<String,String> deductibleAccumulatorDetails)throws Throwable {
-		String strABPStart = deductibleAccumulatorDetails.get("BeginDate");
-		String strABPEnd = deductibleAccumulatorDetails.get("Indicator");		
-		String strABPLevel = deductibleAccumulatorDetails.get("ProcessDate");
-		String strACAccumulatorID = deductibleAccumulatorDetails.get("BeginDate");
-		String strACStart = deductibleAccumulatorDetails.get("Indicator");		
-		String strACEnd = deductibleAccumulatorDetails.get("ProcessDate");
-		String strACIndicator = deductibleAccumulatorDetails.get("BeginDate");
-		String strAAType = deductibleAccumulatorDetails.get("Indicator");		
-		String strAAName = deductibleAccumulatorDetails.get("ProcessDate");
-		String strAAMedicalRx = deductibleAccumulatorDetails.get("BeginDate");
-		String strAANetwork = deductibleAccumulatorDetails.get("Indicator");		
-		String strAARetailMailOrder = deductibleAccumulatorDetails.get("ProcessDate");
-		String strAABrandGeneric = deductibleAccumulatorDetails.get("BeginDate");
-		String strAACSRIndicator = deductibleAccumulatorDetails.get("Indicator");		
-		String strAACSRComparison = deductibleAccumulatorDetails.get("ProcessDate");
-		String strAARenewal = deductibleAccumulatorDetails.get("BeginDate");
-		String strIAIndividualLimit = deductibleAccumulatorDetails.get("Indicator");		
-		String strIAMemberPaid = deductibleAccumulatorDetails.get("ProcessDate");
-		String strIAAmountToMeet = deductibleAccumulatorDetails.get("BeginDate");
-		String strIAPlanPaid = deductibleAccumulatorDetails.get("Indicator");		
-		String strIAExcludedAmount = deductibleAccumulatorDetails.get("ProcessDate");
-		String strIAPLRO = deductibleAccumulatorDetails.get("BeginDate");
-		String strIAClaims = deductibleAccumulatorDetails.get("Indicator");		
-		String strIAMetDate = deductibleAccumulatorDetails.get("ProcessDate");
-		String strFAFamilyLimit = deductibleAccumulatorDetails.get("Indicator");		
-		String strFAFamilyPaid = deductibleAccumulatorDetails.get("ProcessDate");
-		String strFAAmountToMeet = deductibleAccumulatorDetails.get("BeginDate");
-		String strFAPlanPaid = deductibleAccumulatorDetails.get("Indicator");		
-		String strFAExcludedAmount = deductibleAccumulatorDetails.get("ProcessDate");
-		String strFAClaims = deductibleAccumulatorDetails.get("Indicator");		
-		String strFAMetDate = deductibleAccumulatorDetails.get("ProcessDate");
+		String strABPStart = deductibleAccumulatorDetails.get("ABPStart");
+		String strABPEnd = deductibleAccumulatorDetails.get("ABPEnd");		
+		String strABPLevel = deductibleAccumulatorDetails.get("ABPLevel");
+		String strACAccumulatorID = deductibleAccumulatorDetails.get("ACAccumulatorID");
+		String strACStart = deductibleAccumulatorDetails.get("ACStart");		
+		String strACEnd = deductibleAccumulatorDetails.get("ACEnd");
+		String strACIndicator = deductibleAccumulatorDetails.get("ACIndicator");
+		String strAAType = deductibleAccumulatorDetails.get("AAType");		
+		String strAAName = deductibleAccumulatorDetails.get("AAName");
+		String strAAMedicalRx = deductibleAccumulatorDetails.get("AAMedicalRx");
+		String strAANetwork = deductibleAccumulatorDetails.get("AANetwork");		
+		String strAARetailMailOrder = deductibleAccumulatorDetails.get("AARetailMailOrder");
+		String strAABrandGeneric = deductibleAccumulatorDetails.get("AABrandGeneric");
+		String strAACSRIndicator = deductibleAccumulatorDetails.get("AACSRIndicator");		
+		String strAACSRComparison = deductibleAccumulatorDetails.get("AACSRComparison");
+		String strAARenewal = deductibleAccumulatorDetails.get("AARenewal");
+		String strIAIndividualLimit = deductibleAccumulatorDetails.get("IAIndividualLimit");		
+		String strIAMemberPaid = deductibleAccumulatorDetails.get("IAMemberPaid");
+		String strIAAmountToMeet = deductibleAccumulatorDetails.get("IAAmountToMeet");
+		String strIAPlanPaid = deductibleAccumulatorDetails.get("IAPlanPaid");		
+		String strIAExcludedAmount = deductibleAccumulatorDetails.get("IAExcludedAmount");
+		String strIAPLRO = deductibleAccumulatorDetails.get("IAPLRO");
+		String strIAClaims = deductibleAccumulatorDetails.get("IAClaims");		
+		String strIAMetDate = deductibleAccumulatorDetails.get("IAMetDate");
+		String strFAFamilyLimit = deductibleAccumulatorDetails.get("FAFamilyLimit");		
+		String strFAFamilyPaid = deductibleAccumulatorDetails.get("FAFamilyPaid");
+		String strFAAmountToMeet = deductibleAccumulatorDetails.get("FAAmountToMeet");
+		String strFAPlanPaid = deductibleAccumulatorDetails.get("FAPlanPaid");		
+		String strFAExcludedAmount = deductibleAccumulatorDetails.get("FAExcludedAmount");
+		String strFAClaims = deductibleAccumulatorDetails.get("FAClaims");		
+		String strFAMetDate = deductibleAccumulatorDetails.get("FAMetDate");
 				
 		expBEDeductAccumDetails.add(strABPStart);
 		expBEDeductAccumDetails.add(strABPEnd);
@@ -139,7 +139,6 @@ public class PharmacyLookup_BenefitsEligibility_DeductibleAccumulator_Steps {
 			deductAccumDetailsSoft.assertEquals(pharmacyLookup_BenefitsEligibility_DeductibleAccumulatorSelector.actBEDeductAccumDetails.get(i), expBEDeductAccumDetails.get(i));
 		}		
 		deductAccumDetailsSoft.assertAll();
-		deductAccumDetailsSoft = null;
 	}
 }
 

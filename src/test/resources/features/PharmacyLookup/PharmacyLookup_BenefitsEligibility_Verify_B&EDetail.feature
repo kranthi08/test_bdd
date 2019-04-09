@@ -1,10 +1,10 @@
 Feature: PharmacyLookup Search verify Benefits and Eligibility B&E Detail
 
-  Background: performLogin
+   Background: performLogin
     Given the user access the Hybrid Desktop Application
-      | userid   | dt79655 |
-      | password | shiv123 |
-      | region   | DR1     |
+      | userid   | |
+      | password | |
+      | region   | |
 
   @Functional
   Scenario Outline: Pharmacy Lookup search with valid data
@@ -93,8 +93,8 @@ Feature: PharmacyLookup Search verify Benefits and Eligibility B&E Detail
       | DeviceOperatorUpdated	| <DeviceOperatorUpdated> |
       
     Examples:       
-      | MemberID                      | AltMemberID	                      | FirstName	        | LastName                    | MI   | CustomerSet          | Customer                 | Client                   | Group                                 | DOB             | DeceasedDate    | Gender    | Relationship                 | MedicareBeneficiaryID     | CaseId	                     | CardHolderFirstName | CardHolderLastName | CardHolderMI | CardReissueDate	   | CardReissueReason  	 | Line1	  | Line2    | Line3    | City	 | State   | Zip             | Country   | Phone	  | Email   | MiscData1     | MiscData2     | MiscData3     | DateTimeAdded                        | DeviceOperatorAdded                  | DateTimeUpdated     | DeviceOperatorUpdated	    |
-      | Member ID:^000000090413000100 | Alt Member ID:^000000090413000100 | First Name:^RWTC4 | Last Name:^MBRNONBRIDGECUST | MI:^ | Customer Set:^Humana | Customer:^319 0319HUMANA | Client:^9007 NBRG--CLNT1 | Group:^RWNBRG REGR2 DONT USE REWORK10 |	DOB:^01/01/1940 | Deceased Date:^ | Gender:^F | Relationship:^1 - Cardholder | Medicare Beneficiary ID:^ | Case ID:^000000000904130001 | First Name:^        | Last Name:^        | MI:^         | Card Reissue Date:^ | Card Reissue Reason:^ | Line 1:^ | Line 2:^ | Line 3:^ | City:^ | State:^ | ZIP:^00000-0000 | Country:^ | Phone:^	| Email:^ | Misc Data 1:^ | Misc Data 2:^ | Misc Data 3:^ | Date/Time Added:^04/13/2019$09:37:44 | Device/Operator Added:^I36033B9$M8X | Date/Time Updated:^ | Device/Operator Updated:^ |   
+      | MemberID                      | AltMemberID	                      | FirstName	        | LastName                    | MI   | CustomerSet          | Customer                 | Client                   | Group                                 | DOB             | DeceasedDate    | Gender    | Relationship                 | MedicareBeneficiaryID     | CaseId	                     | CardHolderFirstName | CardHolderLastName | CardHolderMI | CardReissueDate	   | CardReissueReason  	 | Line1	  | Line2    | Line3    | City	 | State   | Zip             | Country   | Phone	  | Email   | MiscData1     | MiscData2     | MiscData3     | DateTimeAdded                        | DeviceOperatorAdded                 | DateTimeUpdated     | DeviceOperatorUpdated	   |
+      | Member ID:^000000090413000100 | Alt Member ID:^000000090413000100 | First Name:^RWTC4 | Last Name:^MBRNONBRIDGECUST | MI:^ | Customer Set:^Humana | Customer:^319 0319HUMANA | Client:^9007 NBRG--CLNT1 | Group:^RWNBRG REGR2 DONT USE REWORK10 |	DOB:^01/01/1940 | Deceased Date:^ | Gender:^F | Relationship:^1 - Cardholder | Medicare Beneficiary ID:^ | Case ID:^000000000904130001 | First Name:^        | Last Name:^        | MI:^         | Card Reissue Date:^ | Card Reissue Reason:^ | Line 1:^ | Line 2:^ | Line 3:^ | City:^ | State:^ | ZIP:^00000-0000 | Country:^ | Phone:^	| Email:^ | Misc Data 1:^ | Misc Data 2:^ | Misc Data 3:^ | Date/Time Added:^04/13/2019!09:37:44 | Device/Operator Added:^I36033B9!M8X | Date/Time Updated:^ | Device/Operator Updated:^ |   
       
   @Functional
   Scenario Outline: Verify Additional Eligibility Details

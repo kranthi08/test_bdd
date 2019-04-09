@@ -29,8 +29,6 @@ import org.testng.Assert;
 import org.testng.asserts.SoftAssert;
 
 import cucumber.runtime.Utils;
-// review completed
-
 
 public class RxNova_Utlilty {
 	
@@ -1181,11 +1179,11 @@ public String RxNovaConnect_WebTable_VerifyRowData(By objElementName,String strR
 			    {
 				   strActLabelValue = strCols.get(j+1).getText();
 			    }
-			   if(strExpLabelValue.contains("$")) // To handle the multiple values in single row
+			   if(strExpLabelValue.contains("!")) // To handle the multiple values in single row
 			    {
 				   String strActLabelValue1 = strCols.get(j+1).getText();
 				   String strActLabelValue2 = strCols.get(j+2).getText();
-				   strActLabelValue = strActLabelValue1+"$"+strActLabelValue2;
+				   strActLabelValue = strActLabelValue1+"!"+strActLabelValue2;
 			    }
 			   if(strActLabelValue.equalsIgnoreCase(strExpLabelValue))
 			    {
@@ -1240,11 +1238,13 @@ public String RxNovaConnect_WebTable_VerifyColumnData(By objElementName,String s
  	    	
  	    	List<WebElement> strColHeaderValueRows = strColHeaderValues.findElements(By.tagName("tr"));
  	    	
- 	    	List<WebElement> strColHeaderValue = strColHeaderValueRows.get(0).findElements(By.tagName("td"));
-    		
-    		strActColHeaderValue = strColHeaderValue.get(j).getText();
+ 	    	for(int k=0;k<strColHeaderValueRows.size();k++)
+ 	    	 {
+ 	    		List<WebElement> strColHeaderValue = strColHeaderValueRows.get(k).findElements(By.tagName("td"));
  	    		
- 			if(strActColHeaderValue.equalsIgnoreCase(strExpColHeaderValue))
+ 	    		strActColHeaderValue = strColHeaderValue.get(j).getText();
+ 	    		
+ 	 			if(strActColHeaderValue.equalsIgnoreCase(strExpColHeaderValue))
 			    {
  			       boolRxNovaConnect_WebTable_VerifyColumnData = true;
 				   System.out.println("The Column "+strActColHeaderName+" has the value "+strActColHeaderValue);
@@ -1253,10 +1253,11 @@ public String RxNovaConnect_WebTable_VerifyColumnData(By objElementName,String s
 			    {
 				  System.out.println("The Column "+strActColHeaderName+" has the value "+strActColHeaderValue);				  
 			    }
- 			 break A;
-		    }
- 	    	
-	    }
+ 			 break A;	
+ 	    		
+ 	    	 }
+ 	       }
+ 	    }
     }	
 	
 	if(boolRxNovaConnect_WebTable_VerifyColumnData==false)
@@ -1291,7 +1292,6 @@ public String RxNovaConnect_WebTable_VerifyRowColumnData(By objElementName,Strin
 			 strActLabelValue = strColValue.get(i).getText();
 			 if(strActLabelValue.contains("..."))
 				{
-				    //strActLabelValue = strColName.get(i).getAttribute("title");
 				    String strRepLabelValue=strActLabelValue.replace("...","_");
 					String[] arrActLabelValue=strRepLabelValue.split("_");    							
 					
@@ -1340,7 +1340,11 @@ public String RxNovaConnect_WebTable_VerifySingleRowColumnData(By objElementName
 		List<WebElement> strColHeaderVal = strColHeaderRows.get(i).findElements(By.tagName("th"));
 		for(int j=0;j<strColHeaderVal.size();j++)
 		{
-		strActColHeaderName = strColHeaderVal.get(j).getText();   
+		strActColHeaderName = strColHeaderVal.get(j).getText();
+		if(strActColHeaderName.contains("\n"))
+		 {
+			strActColHeaderName = strActColHeaderName.replace("\n", " ");
+		 }
  	    if(strActColHeaderName.equalsIgnoreCase(strExpColHeaderName))
 		   {
  	    	WebElement strColHeaderValues = driver.findElement(objElementName).findElement(By.tagName("tbody"));
@@ -1351,7 +1355,7 @@ public String RxNovaConnect_WebTable_VerifySingleRowColumnData(By objElementName
     		
     		strActColHeaderValue = strColHeaderValue.get(0).getText();
     		
-    		if(strActColHeaderValue.contains("No results were found matching your criteria."))
+    		if(strActColHeaderValue.contains("No"))
     		{
     			strActColHeaderValue = "";
     		}
@@ -1378,6 +1382,119 @@ public String RxNovaConnect_WebTable_VerifySingleRowColumnData(By objElementName
 	
 	return strActColHeaderName+"^"+strActColHeaderValue;
 }
+
+/////////////////////////// RxNovaConnect_WebTable_VerifyMultipleColumnData ///////////////////////////////////////////////////
+
+public String RxNovaConnect_WebTable_VerifyMultipleColumnData(By objElementName,String strColValue) throws InterruptedException
+{
+	Boolean boolRxNovaConnect_WebTable_VerifyMultipleColumnData = true;
+	
+	String[] arrExpColHeaderValue = strColValue.split("\\^",-1);
+	
+	String strActColHeaderValue="";
+	String strActColHeaderValue1="";
+	
+   WebElement strColHeaderValues = driver.findElement(objElementName).findElement(By.tagName("tbody"));
+		 	     
+	List<WebElement> strColHeaderValueRows = strColHeaderValues.findElements(By.tagName("tr"));
+		 	     
+	A:
+	for(int i=0;i<strColHeaderValueRows.size();i++)
+	 {
+	     
+	    List<WebElement> strColHeaderValue = strColHeaderValueRows.get(i).findElements(By.tagName("td"));
+	    	        
+	    strActColHeaderValue = strColHeaderValue.get(0).getText();
+	 	if(strActColHeaderValue.equalsIgnoreCase(arrExpColHeaderValue[0]))
+	      {
+		 	for(int j=0;j<strColHeaderValue.size();j++)
+		 	{
+		 		strActColHeaderValue= strColHeaderValue.get(j).getText();
+		 		if(strActColHeaderValue.equalsIgnoreCase(arrExpColHeaderValue[j]))
+		 		 {
+		 			System.out.println("The Column has the value "+strActColHeaderValue);	 		 			
+		 		 }
+		 		else
+		 		 {
+		 			System.out.println("The Column has the value "+strActColHeaderValue);
+		 			boolRxNovaConnect_WebTable_VerifyMultipleColumnData = false;
+		 		 }
+		 		if(j==0)
+		 		 {
+		 			strActColHeaderValue1 = strActColHeaderValue;
+		 		 }
+		 		else if(j!=strColHeaderValue.size())
+		 		 {
+		 			strActColHeaderValue1 = strActColHeaderValue1+"^"+strActColHeaderValue;
+		 		 }
+		 		if(j==strColHeaderValue.size()-1)
+		 		{
+		 			break A;
+		 		}
+		 		
+	         }
+	      }
+	  }
+
+	
+	if(boolRxNovaConnect_WebTable_VerifyMultipleColumnData==false)
+	{
+		System.out.println("Webtable  : '" + driver.findElement(objElementName) + "' with "+strActColHeaderValue1+" was not found");
+	}
+	
+	return strActColHeaderValue1;
+}
+
+/////////////////////////// RxNovaConnect_WebTable_VerifyRowDataWithThreeCols ///////////////////////////////////////////////////
+
+public String RxNovaConnect_WebTable_VerifyRowDataWithThreeCols(By objElementName,String strRowValue) throws InterruptedException
+{
+	Boolean boolRxNovaConnect_WebTable_VerifyRowDataWithThreeCols = false;
+	
+	String strActLabelName="";
+	String strActLabelValue="";
+	
+	String[] arrRowValue = strRowValue.split("\\^",-1);
+	String strExpLabelName = arrRowValue[0];
+	String strExpLabelValue = arrRowValue[1];		
+	
+	WebElement strTblBody = driver.findElement(objElementName).findElement(By.tagName("tbody"));
+	List<WebElement> strRows = strTblBody.findElements(By.tagName("tr"));
+	A:
+	for(int i=0;i<strRows.size();i++)
+	{
+	List<WebElement> strCols = strRows.get(i).findElements(By.tagName("td"));
+	for(int j=0;j<strCols.size();j=j+3)
+	{
+	strActLabelName = strCols.get(j+1).getText();
+	//System.out.println(strActLabelValue);
+	if(strActLabelName.equalsIgnoreCase(strExpLabelName))
+	{
+	strActLabelValue = strCols.get(j+2).getText();
+	//System.out.println(strActLabelValue);
+	if(strActLabelValue.equalsIgnoreCase(strExpLabelValue))
+	{
+	boolRxNovaConnect_WebTable_VerifyRowDataWithThreeCols = true;
+	System.out.println("The Field "+strActLabelName+" has the value "+(strActLabelValue.trim()));				   
+	}
+	else
+	{
+	System.out.println("The Field "+strActLabelName+" has the value "+strActLabelValue);
+	}
+	break A;
+	}
+	}
+	}	
+	
+	
+	if(boolRxNovaConnect_WebTable_VerifyRowDataWithThreeCols==false)
+	{
+	System.out.println("Webtable  : '" + driver.findElement(objElementName) + "' with "+strRowValue+" was not found");
+	}
+	
+	return strActLabelName+"^"+strActLabelValue;
+}
+
 
 
 

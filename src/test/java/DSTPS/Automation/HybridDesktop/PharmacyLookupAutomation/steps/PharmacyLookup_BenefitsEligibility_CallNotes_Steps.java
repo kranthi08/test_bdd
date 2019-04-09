@@ -70,7 +70,6 @@ public class PharmacyLookup_BenefitsEligibility_CallNotes_Steps {
 		
 		benefitsCallNotesResultSoft.assertEquals(afterTotalResultsCount, beforeTotalResultsCount+1);
 		benefitsCallNotesResultSoft.assertAll();
-		benefitsCallNotesResultSoft = null;
 	}
 	
 	public void verifyPreviousCallNotesComments(Map<String,String> previousCallNotesComments)throws Throwable {
@@ -80,7 +79,6 @@ public class PharmacyLookup_BenefitsEligibility_CallNotes_Steps {
 		String strActPrevCallNotesComments = arrActPrevCallNotes[1];
 		benefitsPrevCallNotesSoft.assertEquals(strActPrevCallNotesComments, strExpPrevCallNotesComments);
 		benefitsPrevCallNotesSoft.assertAll();
-		benefitsPrevCallNotesSoft = null;
 	}
 	
 	public void verifyCallNotesDetails(Map<String,String> callNotesDetails) throws Throwable {
@@ -98,7 +96,6 @@ public class PharmacyLookup_BenefitsEligibility_CallNotes_Steps {
 			benefitsCallNotesDetailsSoft.assertEquals(pharmacyLookup_BenefitsEligibility_CallNotesSelector.actCallNotesDetails.get(i), expCallNotesDetails.get(i));
 		}		
 		benefitsCallNotesDetailsSoft.assertAll();
-		benefitsCallNotesDetailsSoft = null;
 	}
 }
 

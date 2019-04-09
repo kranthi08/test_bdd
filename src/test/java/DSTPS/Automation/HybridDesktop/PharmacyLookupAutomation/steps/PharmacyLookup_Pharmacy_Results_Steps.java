@@ -183,7 +183,6 @@ public class PharmacyLookup_Pharmacy_Results_Steps {
 			pharmacyResultsSoft.assertEquals(pharmacyLookup_Pharmacy_ResultsSelector.actPharmacyResults.get(i), expPharmacyResults.get(i));
 		}		
 		pharmacyResultsSoft.assertAll();
-		pharmacyResultsSoft = null;
 	}	
 }
 

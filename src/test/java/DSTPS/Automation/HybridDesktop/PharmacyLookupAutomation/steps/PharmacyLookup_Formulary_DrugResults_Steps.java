@@ -67,21 +67,16 @@ public class PharmacyLookup_Formulary_DrugResults_Steps {
 			drugResultsSoft.assertEquals(pharmacyLookup_Formulary_DrugResultsSelector.actDrugResults.get(i), expDrugResults.get(i));
 		}		
 		drugResultsSoft.assertAll();
-		drugResultsSoft = null;
 	}
 	
 	public void verifyClaimTestDetails(Map<String,String> claimTestDetails) throws Throwable{
 		String strType = claimTestDetails.get("Type");
 		String strTransactionType = claimTestDetails.get("TransactionType");		
 		String strPrevClaimID = claimTestDetails.get("PreviousClaimID");		
-		//String strTrackingID = claimTestDetails.get("TrackingID");
-		//String strNotes = claimTestDetails.get("Notes");
 		
 		expClaimTestSummary.add(strType);
 		expClaimTestSummary.add(strTransactionType);
 		expClaimTestSummary.add(strPrevClaimID);
-		//expClaimTestSummary.add(strTrackingID);
-		//expClaimTestSummary.add(strNotes);
 		
 		pharmacyLookup_Formulary_DrugResultsSelector.Formulary_DrugResults_clickOnClaimTestButton();		
 		pharmacyLookup_Formulary_DrugResultsSelector.verifyClaimTest();
@@ -95,7 +90,6 @@ public class PharmacyLookup_Formulary_DrugResults_Steps {
 			claimTestSoft.assertEquals(pharmacyLookup_Formulary_DrugResultsSelector.actClaimTestSummary.get(i), expClaimTestSummary.get(i));
 		}		
 		claimTestSoft.assertAll();
-		claimTestSoft = null;
 	}
 }
 

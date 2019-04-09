@@ -1,10 +1,10 @@
 Feature: PharmacyLookup Search verify Formulary Drug Results
 
-  Background: performLogin
+    Background: performLogin
     Given the user access the Hybrid Desktop Application
-      | userid   | dt79655 |
-      | password | shiv123 |
-      | region   | DR1     |
+      | userid   | |
+      | password | |
+      | region   | |
 
   @Functional
   Scenario Outline: Pharmacy Lookup search with valid data
@@ -71,16 +71,13 @@ Feature: PharmacyLookup Search verify Formulary Drug Results
   Scenario Outline: Verify Claim Test Details
     Given User in Formulary Details page    
     Then User click on Claim Test button verifies the Claim Test Entry details in Claim Home Screen
-    ## discuss this ##
       | Type            | <Type>						|         
       | TransactionType | <TransactionType> |
       | PreviousClaimID | <PreviousClaimID> |
-      #| TrackingID      | <TrackingID>      |         
-      #| Notes           | <Notes>           |      
           
     Examples: 
-      | Type             | TransactionType            | PreviousClaimID        |# TrackingID    | Notes   | 
-      | Type:^Claim test | Transaction type:^Standard | Previous claim ID:^N/A |# Tracking ID:^ | Notes:^ | 
+      | Type             | TransactionType            | PreviousClaimID        | 
+      | Type:^Claim test | Transaction type:^Standard | Previous claim ID:^N/A | 
 
   
   

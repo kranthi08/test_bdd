@@ -70,7 +70,7 @@ public class PharmacyLookup_Authorization_CallNotes_Steps {
 		
 		authCallNotesResultSoft.assertEquals(afterTotalResultsCount, beforeTotalResultsCount+1);
 		authCallNotesResultSoft.assertAll();
-		authCallNotesResultSoft = null;
+		//authCallNotesResultSoft = null;
 	}
 	
 	public void verifyPreviousCallNotesComments(Map<String,String> previousCallNotesComments)throws Throwable {
@@ -80,8 +80,6 @@ public class PharmacyLookup_Authorization_CallNotes_Steps {
 		String strActPrevCallNotesComments = arrActPrevCallNotes[1];
 		authPrevCallNotesSoft.assertEquals(strActPrevCallNotesComments, strExpPrevCallNotesComments);
 		authPrevCallNotesSoft.assertAll();
-		authPrevCallNotesSoft = null;
-		return;
 	}
 	
 	public void verifyCallNotesDetails(Map<String,String> callNotesDetails) throws Throwable {
@@ -99,7 +97,6 @@ public class PharmacyLookup_Authorization_CallNotes_Steps {
 			authCallNotesDetailsSoft.assertEquals(pharmacyLookup_Authorization_CallNotesSelector.actCallNotesDetails.get(i), expCallNotesDetails.get(i));
 		}		
 		authCallNotesDetailsSoft.assertAll();
-		authCallNotesDetailsSoft = null;
 	}
 }
 

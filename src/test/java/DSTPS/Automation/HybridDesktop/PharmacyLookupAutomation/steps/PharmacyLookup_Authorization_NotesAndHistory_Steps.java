@@ -58,7 +58,6 @@ public class PharmacyLookup_Authorization_NotesAndHistory_Steps {
 			authNotesHistorySoft.assertEquals(pharmacyLookup_Authorization_NotesAndHistorySelector.actAuthNotesHistoryDetails.get(i), expAuthNotesHistoryDetails.get(i));
 		}		
 		authNotesHistorySoft.assertAll();
-		authNotesHistorySoft = null;
 	}
 }
 

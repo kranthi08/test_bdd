@@ -28,7 +28,7 @@ public class PharmacyLookup_DetailsSelector {
 	private void PharmacyLookup_Details_Objects()
 	{		
 		BENEFITSELIGIBILITY_LINK = By.xpath("//a[starts-with(@class,'ui-commandlink lnk-scenario lnk-') and contains(text(),'benefits')]");
-		CLAIM_LINK = By.xpath("//a[starts-with(@class,'ui-commandlink lnk-scenario lnk-') and contains(text(),'claim')]"); //By.xpath("//a[@class='ui-commandlink lnk-scenario lnk-claim ']");;
+		CLAIM_LINK = By.xpath("//a[starts-with(@class,'ui-commandlink lnk-scenario lnk-') and contains(text(),'claim')]");
 		FORMULARY_LINK = By.xpath("//a[starts-with(@class,'ui-commandlink lnk-scenario lnk-') and contains(text(),'formulary')]");
 		PHARMACY_LINK = By.xpath("//a[starts-with(@class,'ui-commandlink lnk-scenario lnk-') and contains(text(),'pharmacy')]");
 		AUTHORIZATION_LINK = By.xpath("//a[starts-with(@class,'ui-commandlink lnk-scenario lnk-') and contains(text(),'priorauth')]");

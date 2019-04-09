@@ -32,9 +32,9 @@ public class PharmacyLookup_Reimbursement_ResultsSelector {
 		REIMBURSEMENT_PAYEEINFO_TABLE = By.xpath("//*[@class='fl custom-tbls payee-info-tbl']");
 		REIMBURSEMENT_PAYMENTINFO_TABLE = By.xpath("//*[@class='fl custom-tbls payment-info-tbl']");
 		REIMBURSEMENT_COMMENTS_TABLE = By.xpath("//*[@class='fl custom-tbls reim-comments-tbl']");
-		REIMBURSEMENT_CLAIMS_TABLE = By.xpath("//*[@id='reimbursementForm:reimbursementAccordionPanel:reimbursementPaidDetail']/div[2]/table"); // Need to discuss on this
-		REIMBURSEMENT_AWP_TABLE =By.xpath("//*[@id='reimbursementForm:reimbursementAccordionPanel']/div[2]//table");  // Need to discuss on this
-		REIMBURSEMENT_DENIED_TABLE = By.xpath("//*[@id='reimbursementForm:reimbursementAccordionPanel']/div[3]//table");  // Need to discuss on this
+		REIMBURSEMENT_CLAIMS_TABLE = By.xpath("//*[@id='reimbursementForm:reimbursementAccordionPanel:reimbursementPaidDetail']/div[2]/table");
+		REIMBURSEMENT_AWP_TABLE =By.xpath("//*[@id='reimbursementForm:reimbursementAccordionPanel']/div[2]//table");
+		REIMBURSEMENT_DENIED_TABLE = By.xpath("//*[@id='reimbursementForm:reimbursementAccordionPanel']/div[3]//table");
 	}
 	
 	//~~~~~~~~~~~~~~~~~~~~~~~~~~Reimbursement Results Operations~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~

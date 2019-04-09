@@ -1,13 +1,10 @@
-
-# Git lab testing from Offshore
-
 Feature: PharmacyLookup Search verify Authorization Call Notes
 
-  Background: performLogin
+    Background: performLogin
     Given the user access the Hybrid Desktop Application
-      | userid   | dt79655 |
-      | password | shiv123 |
-      | region   | DR1     |
+      | userid   | |
+      | password | |
+      | region   | |
 
   @Functional
   Scenario Outline: Pharmacy Lookup search with valid data
@@ -21,7 +18,7 @@ Feature: PharmacyLookup Search verify Authorization Call Notes
       | DateOfBirth | <DateOfBirth> |
       | MemberName  | <MemberName>  |
       | Error       | <Error>      	|
-      | Date		| <Date>      	|
+      | Date				| <Date>      	|
       | Time        | <Time>        |
       | CICSStatus  | <CICSStatus>  |
       | CustID      | <CustID>      |
@@ -64,8 +61,6 @@ Feature: PharmacyLookup Search verify Authorization Call Notes
     Then User verifies Authorization Previous Call Notes Comments            
       | PrevCallNotesComment |<PrevCallNotesComment> |     
     Then User verify Authorization Previous Call Notes details    
-    	| Date	 | <Date>   |         
-      | Time 	 | <Time>		|
       | Type   | <Type>   |
 	    | Status | <Status>	|
       | UserID | <UserID> |

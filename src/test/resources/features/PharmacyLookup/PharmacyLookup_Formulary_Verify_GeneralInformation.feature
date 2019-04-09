@@ -1,10 +1,10 @@
 Feature: PharmacyLookup Search verify Formulary General Information
 
-  Background: performLogin
+    Background: performLogin
     Given the user access the Hybrid Desktop Application
-      | userid   | dt79655 |
-      | password | shiv123 |
-      | region   | DR1     |
+      | userid   | |
+      | password | |
+      | region   | |
 
   @Functional
   Scenario Outline: Pharmacy Lookup search with valid data

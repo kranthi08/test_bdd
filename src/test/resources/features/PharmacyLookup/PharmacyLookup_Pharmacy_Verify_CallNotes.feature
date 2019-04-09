@@ -1,10 +1,10 @@
 Feature: PharmacyLookup Search verify Pharmacy Call Notes
 
-  Background: performLogin
+   Background: performLogin
     Given the user access the Hybrid Desktop Application
-      | userid   | dt79655 |
-      | password | shiv123 |
-      | region   | DR1     |
+      | userid   | |
+      | password | |
+      | region   | |
 
   @Functional
   Scenario Outline: Pharmacy Lookup search with valid data
@@ -66,8 +66,6 @@ Feature: PharmacyLookup Search verify Pharmacy Call Notes
     Then User verifies Pharmacy Previous Call Notes Comments            
       | PrevCallNotesComment |<PrevCallNotesComment> |     
     Then User verify Pharmacy Previous Call Notes details    
-    	| Date	 | <Date>   |         
-      | Time 	 | <Time>		|
       | Type   | <Type>   |
 	    | Status | <Status>	|
       | UserID | <UserID> |
