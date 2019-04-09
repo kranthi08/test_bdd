@@ -72,7 +72,9 @@ public class HybridDesktop_SharedResource {
 		 	ChromeOptions options = new ChromeOptions();		 	
 		 	//options.setBinary("C:/Program Files (x86)/Argus/RxNova.exe");
 		 	options.setBinary("C:/Program Files (x86)/RxNova/RxNova.exe"); //Changed from Argus to RxNova for the latest version 181f
-		 	options.addArguments("--start-maximized");
+		 	options.addArguments("--start-maximized");		 	
+		 	options.addArguments("--disable-dev-shm-usage");
+		 	options.addArguments("--no-sandbox");
 		 	driver = new ChromeDriver(options);	 	
 		 	//driver.get("https://argusprod-int.dstcorp.net/sso-web/logon.jsf"); 
 		 	driver.get("https://dev-web/sso-web/logon.jsf"); 
