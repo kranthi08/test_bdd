@@ -237,8 +237,8 @@
 		    	     <configuration>
 		    	     	<systemPropertyVariables>
 		    	     		<MavenRegion>DR1</MavenRegion>
-		    	     		<MavenUsername>csre</MavenUsername>
-		    	     		<MavenPassword>tintin1</MavenPassword>		    	     		
+		    	     		<MavenUsername></MavenUsername>
+		    	     		<MavenPassword></MavenPassword>		    	     		
 		    	     	</systemPropertyVariables>
 		                 <suiteXmlFiles>
             				<suiteXmlFile>testng.xml</suiteXmlFile>
