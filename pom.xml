@@ -163,6 +163,8 @@
     <version>3.0</version>
 	</dependency>	
 	
+	
+	
 <!-- 	<dependency>
     <groupId>com.github.mkolisnyk</groupId>
     <artifactId>cucumber-runner</artifactId>
@@ -205,6 +207,12 @@
 <build>
 	<pluginManagement>
 		<plugins>
+		
+		<plugin>
+		  <groupId>org.sonarsource.scanner.maven</groupId>
+		  <artifactId>sonar-maven-plugin</artifactId>
+		  <version>3.2</version>
+		</plugin>
 		 	
 		<!-- <plugin>
 		    <groupId>org.apache.maven.plugins</groupId>
