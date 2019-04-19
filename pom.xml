@@ -20,14 +20,13 @@
     <dependency>	
 	    <groupId>org.seleniumhq.selenium</groupId>
 	    <artifactId>selenium-java</artifactId>
-	    <version>3.7.1</version>
-	    
+	    <version>3.141.59</version>	    
 	</dependency>
 	
 	<dependency>
 	    <groupId>org.seleniumhq.selenium</groupId>
 	    <artifactId>selenium-server</artifactId>
-	    <version>3.7.1</version>
+	    <version>3.141.59</version>
 	</dependency>	
 		
 	<dependency>
@@ -246,8 +245,8 @@
 		    	     <configuration>
 		    	     	<systemPropertyVariables>
 		    	     		<MavenRegion>DR1</MavenRegion>
-		    	     		<MavenUsername></MavenUsername>
-		    	     		<MavenPassword></MavenPassword>		    	     		
+		    	     		<MavenUsername>csre</MavenUsername>
+		    	     		<MavenPassword>tintin1</MavenPassword>		    	     		
 		    	     	</systemPropertyVariables>
 		                 <suiteXmlFiles>
             				<suiteXmlFile>testng.xml</suiteXmlFile>

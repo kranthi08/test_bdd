@@ -9,7 +9,7 @@ import org.openqa.selenium.TakesScreenshot;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.chrome.ChromeOptions;
-import org.openqa.selenium.os.WindowsUtils;
+//import org.openqa.selenium.os.WindowsUtils;
 import org.openqa.selenium.remote.RemoteWebDriver;
 import org.testng.annotations.AfterClass;
 import org.testng.annotations.AfterTest;
@@ -54,9 +54,9 @@ public class HybridDesktop_SharedResource {
 		}catch(Exception e)
 		{
 			driver= null;
-			WindowsUtils.killByName("chromedriver.exe");
-			WindowsUtils.killByName("toolbar.exe");
-			WindowsUtils.killByName("RxNova.exe");
+			//WindowsUtils.killByName("chromedriver.exe");
+			//WindowsUtils.killByName("toolbar.exe");
+			//WindowsUtils.killByName("RxNova.exe");
 			performLaunchAndLoginAgain=true;
 			System.out.println("driver is set to null ");
 		}
