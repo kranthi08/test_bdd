@@ -33,6 +33,8 @@ public class HybridDesktop_SharedResource {
 	public static ThreadLocal<WebDriver> Tdriver = new ThreadLocal<WebDriver>();	
 	public static boolean performLaunchAndLoginAgain;
 	
+	public int i =0;
+	
 	@Before
 	public void beforeTest(Scenario scenario)
 	{			
@@ -75,6 +77,7 @@ public class HybridDesktop_SharedResource {
 		 	options.addArguments("--start-maximized");		 	
 		 	options.addArguments("--disable-dev-shm-usage");
 		 	options.addArguments("--no-sandbox");
+		 	
 		 	driver = new ChromeDriver(options);	 	
 		 	//driver.get("https://argusprod-int.dstcorp.net/sso-web/logon.jsf"); 
 		 	driver.get("https://dev-web/sso-web/logon.jsf"); 
