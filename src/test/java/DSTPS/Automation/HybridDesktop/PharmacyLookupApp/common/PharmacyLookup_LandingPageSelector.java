@@ -30,7 +30,7 @@ public class PharmacyLookup_LandingPageSelector {
 	
 	private void PharmacyLookup_LandingPage_Objects()
 	{		
-		SEARCH_PHARMACYLOOKUP_PHARMACYNPI = By.id("pharmacyCallCenterSearchForm:pharmacyNPI");
+		SEARCH_PHARMACYLOOKUP_PHARMACYNPI = By.id("pharmacyCallCenterSearchForm:pharmacyNPI");		
 		SEARCH_PHARMACYLOOKUP_RXNUMBER = By.id("pharmacyCallCenterSearchForm:rxNumber");		
 		SEARCH_BUTTON =By.id("pharmacyCallCenterSearchForm:btnSearch");
 		PHARMACYNPI_ERROR_MESSAGE = By.xpath("//input[@id='pharmacyCallCenterSearchForm:pharmacyNPI']/following-sibling::div/span[@class='ui-message-error-icon']");
@@ -45,6 +45,11 @@ public class PharmacyLookup_LandingPageSelector {
 	
 	//~~~~~~~~~~~~~~~~~~~~~~~~~~Pharmacy Lookup Landing Page Operations~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 	public void PharmacyLookup_LandingPage_enterPharmacy_NPI(String strPharmacyNPI) throws Throwable{
+		
+//		System.out.println("Sreenu : total no of Iframes found are - " + driver.findElements(By.tagName("iframe")).size());
+//		System.out.println("Sreenu : total no of htmls found are - " + driver.findElements(By.tagName("html")).size());
+//		driver.switchTo().frame(0);
+//		System.out.println("Sreenu : switching complted");
 		if(!strPharmacyNPI.isEmpty())
 		{
 		utils.SetTextOnEdit(SEARCH_PHARMACYLOOKUP_PHARMACYNPI, strPharmacyNPI);

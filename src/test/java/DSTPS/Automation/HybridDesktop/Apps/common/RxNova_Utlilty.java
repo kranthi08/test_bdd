@@ -606,7 +606,7 @@ public class RxNova_Utlilty {
 	
 	public void CheckPageLoad() throws InterruptedException
 	{
-		if(!driver.findElement(By.id("contentFrame")).isDisplayed()) 
+		if(!driver.findElement(By.id("contentFrame")).isDisplayed())		
 		{
 			driver.navigate().refresh();
 			Thread.sleep(5000);
@@ -673,6 +673,11 @@ public class RxNova_Utlilty {
 		 }
 
 		 System.out.println("latest window title " + driver.getTitle());
+		 
+		 
+		 // Added specally for Angular design
+		 Thread.sleep(8000);
+		 driver.switchTo().frame(0);
 	 }
 	
 	
