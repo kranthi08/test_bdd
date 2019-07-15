@@ -27,7 +27,7 @@ Feature: PharmacyLookup Search verify Claim Details
 
     Examples: 
       | ApplicationMenu               | PharmacyNPI | RxNumber     | MemberID              | DateOfBirth              | MemberName                       | Error  | Date            | Time          | CICSStatus      | CustID                   | ClientID                                          | Group                                    |
-      | Miscellaneous->RxNova Connect |  1710927462 | 120005442999 | Member ID^90413000100 | Date of Birth^01/01/1940 | Member Name^MBRNONBRIDGECUST RWT | Error^ | Date^06/06/2019 | Time^10:27:28 | CICS Status^PWE | Cust ID^319 - 0319HUMANA | Client ID^9007 - NBRG--CLNT1 - NONBRG CLIENT--PDP | Group^2 - RWNBRG REGR2 DONT USE REWORK10 |          
+      | Miscellaneous->RxNova Connect |  1710927462 | 120005552999 | Member ID^90413000100 | Date of Birth^01/01/1940 | Member Name^MBRNONBRIDGECUST RWT | Error^ | Date^06/06/2019 | Time^10:27:28 | CICS Status^PWE | Cust ID^319 - 0319HUMANA | Client ID^9007 - NBRG--CLNT1 - NONBRG CLIENT--PDP | Group^2 - RWNBRG REGR2 DONT USE REWORK10 |          
      
      
   @Functional
@@ -91,7 +91,7 @@ Feature: PharmacyLookup Search verify Claim Details
       
     Examples: 
       | Status         | PharmacyID              | PharmacyQlfr      | RxNo               | POSNo                | ClaimNo                  | DateFilled              | DateWritten              | DateReversed   | DateAdded              | TimeAdded            |DateUpdated   | TimeUpdated            | RxOrigin     |Source       | Version     |
-      | Status:^10-PWE | Pharmacy ID:^1710927462 | Pharmacy Qlfr:^01 | Rx #:^120005442999 | POS #:^19-157-000041 | Claim #:^19-557-000041-1 | Date Filled:^11/10/2018 | Date Written:^10/10/2018 | Date Reversed:^| Date Added:^06/06/2019 | Time Added:^10:27:28 |Date Updated:^| Time Updated:^00:00:00 | Rx Origin:^1 | Source:^POS | Version:^D0 |
+      | Status:^10-PWE | Pharmacy ID:^1710927462 | Pharmacy Qlfr:^01 | Rx #:^120005552999 | POS #:^19-157-000041 | Claim #:^19-557-000041-1 | Date Filled:^11/10/2018 | Date Written:^10/10/2018 | Date Reversed:^| Date Added:^06/06/2019 | Time Added:^10:27:28 |Date Updated:^| Time Updated:^00:00:00 | Rx Origin:^1 | Source:^POS | Version:^D0 |
       
          
   @Functional
