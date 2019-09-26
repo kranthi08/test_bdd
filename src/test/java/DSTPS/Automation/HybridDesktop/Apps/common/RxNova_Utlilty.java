@@ -677,7 +677,11 @@ public class RxNova_Utlilty {
 		 
 		 // Added specally for Angular design
 		 Thread.sleep(8000);
+		 try{
 		 driver.switchTo().frame(0);
+		 }catch(Exception e){
+			 
+		 }
 	 }
 	
 	
