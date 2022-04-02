@@ -1,0 +1,172 @@
+[
+  {
+    "line": 1,
+    "elements": [
+      {
+        "line": 6,
+        "name": "",
+        "description": "",
+        "type": "background",
+        "keyword": "Background",
+        "steps": [
+          {
+            "result": {
+              "duration": 147653000,
+              "status": "passed"
+            },
+            "line": 7,
+            "name": "User Launch the required OrangeHRM URL",
+            "match": {
+              "location": "orangeHRM_LoginPageStepDef.user_Launch_the_required_OrangeHRM_URL()"
+            },
+            "keyword": "When "
+          }
+        ]
+      },
+      {
+        "before": [
+          {
+            "result": {
+              "duration": 7916593700,
+              "status": "passed"
+            },
+            "match": {
+              "location": "SharedResource.beforeTest(Scenario)"
+            }
+          }
+        ],
+        "line": 24,
+        "name": "Verify SignIn functionality with credentials",
+        "description": "",
+        "id": "verify-the-functionality-of-orange-hrm-application;verify-signin-functionality-with-credentials;;2",
+        "after": [
+          {
+            "result": {
+              "duration": 682500,
+              "status": "passed"
+            },
+            "match": {
+              "location": "SharedResource.afterTest(Scenario)"
+            }
+          }
+        ],
+        "type": "scenario",
+        "keyword": "Scenario Outline",
+        "steps": [
+          {
+            "result": {
+              "duration": 34670300,
+              "status": "passed"
+            },
+            "line": 11,
+            "name": "The user is in OrangeHRM application",
+            "match": {
+              "location": "orangeHRM_LoginPageStepDef.the_user_is_in_OrangeHRM_application()"
+            },
+            "keyword": "Given "
+          },
+          {
+            "result": {
+              "duration": 263915400,
+              "status": "passed"
+            },
+            "comments": [
+              {
+                "line": 12,
+                "value": "#\t  When he login into application with valid credentials"
+              },
+              {
+                "line": 13,
+                "value": "#\t  \t| User_Name   | Password   |"
+              },
+              {
+                "line": 14,
+                "value": "#\t  \t| \u003cUser_Name\u003e | \u003cPassword\u003e |"
+              }
+            ],
+            "line": 15,
+            "name": "He input the LoginName into Login Name field",
+            "match": {
+              "location": "orangeHRM_LoginPageStepDef.he_input_the_LoginName_into_Login_Name_field(String,String\u003e)"
+            },
+            "matchedColumns": [
+              0
+            ],
+            "rows": [
+              {
+                "cells": [
+                  "User_Name",
+                  "Admin"
+                ],
+                "line": 16
+              }
+            ],
+            "keyword": "When "
+          },
+          {
+            "result": {
+              "duration": 117500800,
+              "status": "passed"
+            },
+            "line": 17,
+            "name": "He input required password into Password field",
+            "match": {
+              "location": "orangeHRM_LoginPageStepDef.he_input_required_password_into_Password_field(String,String\u003e)"
+            },
+            "matchedColumns": [
+              1
+            ],
+            "rows": [
+              {
+                "cells": [
+                  "Password",
+                  "admin123"
+                ],
+                "line": 18
+              }
+            ],
+            "keyword": "And "
+          },
+          {
+            "result": {
+              "duration": 8157250900,
+              "status": "passed"
+            },
+            "line": 19,
+            "name": "Click on Login button",
+            "match": {
+              "location": "orangeHRM_LoginPageStepDef.click_on_Login_button()"
+            },
+            "keyword": "Then "
+          },
+          {
+            "result": {
+              "duration": 58200,
+              "status": "passed"
+            },
+            "output": [
+              "Completed Scenario"
+            ],
+            "line": 20,
+            "name": "Application Navigates to Employee Information Page",
+            "match": {
+              "location": "orangeHRM_LoginPageStepDef.application_Navigates_to_Employee_Information_Page()"
+            },
+            "keyword": "Then "
+          }
+        ],
+        "tags": [
+          {
+            "line": 9,
+            "name": "@Functional"
+          }
+        ]
+      }
+    ],
+    "name": "Verify the functionality of Orange HRM Application",
+    "description": "      In Order to test the SignOn functionality of Orange HRM application\n      As a Tester \n      I need the required URL and Credentials",
+    "id": "verify-the-functionality-of-orange-hrm-application",
+    "keyword": "Feature",
+    "uri": "features/Login.feature"
+  }
+]
