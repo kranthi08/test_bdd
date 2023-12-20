@@ -11,6 +11,7 @@ CucumberHTML.DOMFormatter = function(rootNode) {
   var $templates = $(CucumberHTML.templates);
 
   this.uri = function(uri) {
+    currentUri = uri;
   };
 
   this.feature = function(feature) {

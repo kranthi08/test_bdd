@@ -24,7 +24,7 @@ import org.openqa.selenium.support.ui.WebDriverWait;
 import org.seleniumhq.jetty9.util.StringUtil;
 import org.testng.Assert;
 
-public class nop_commerce_Utility {
+public class orangeHRM_Utlilty {
 	
 	private SharedResource SharedResource;
 	public WebDriver driver;
@@ -33,7 +33,7 @@ public class nop_commerce_Utility {
 	
 	private static String winHandleLandingPage;
 		
-	public nop_commerce_Utility(SharedResource SharedResource) throws IOException
+	public orangeHRM_Utlilty(SharedResource SharedResource) throws IOException
 	{
 		this.driver = SharedResource.getDriver();
 		this.LOGGER = SharedResource.getLogger();

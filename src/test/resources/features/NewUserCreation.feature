@@ -4,10 +4,10 @@ Feature: Verify the functionality of new user creation in NOP commerce Applicati
         I need the required URL and Credentials
 
   Background: 
-    When User perform login in nop commerce application
+		When User perform login in nop commerce application
 
-  @Functional
-  Scenario: Verify SignIn functionality with credentials
-    Given User is in dashboard page of NOP commerce application
-    When user click on customer link and add the new customer into nop commerce application
-    Then the user verify the created customer
+	@Functional
+	Scenario: Verify SignIn functionality with credentials
+	  Given User is in dashboard page of NOP commerce application
+		When user click on customer link and add new customer in nop commerce application
+		Then the user verify the created customer
