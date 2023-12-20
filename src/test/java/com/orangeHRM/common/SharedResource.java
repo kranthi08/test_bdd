@@ -27,6 +27,12 @@ public class SharedResource {
 	@Before
 	public void beforeTest(Scenario scenario)
 	{			
+			
+		//String node_url = "http://10.117.161.44:4444/wd/hub";		
+		//System.setProperty("webdriver.gecko.driver", System.getProperty("user.dir")+ "\\Drivers\\geckodriver.exe");
+		//System.setProperty("webdriver.chrome.driver", System.getProperty("user.dir")+ "/Drivers/chromedriver.exe");
+		
+		//WebDriver driver=getDriver();
 		WebDriver driver;
 		
 		try{
@@ -39,6 +45,9 @@ public class SharedResource {
 		}catch(Exception e)
 		{
 			driver= null;
+			//WindowsUtils.killByName("chromedriver.exe");
+			//WindowsUtils.killByName("toolbar.exe");
+			//WindowsUtils.killByName("RxNova.exe");
 			performLaunchAndLoginAgain=true;
 			System.out.println("driver is set to null ");
 		}
@@ -49,19 +58,44 @@ public class SharedResource {
 		driver=null;
 		if(myBrowser.equals("chrome"))
 		{			
-			System.setProperty("webdriver.chrome.driver", "C:\\selenium\\chromedriver.exe");		 	
-		 	driver = new ChromeDriver();	 	
-		 	driver.get("https://opensource-demo.orangehrmlive.com/");
-		 	driver.manage().window().maximize();
+			//WindowsUtils.killByName("toolbar.exe");
+		   	//System.setProperty("webdriver.chrome.driver", "D:\\Selenium\\Selenium Trainings\\ChromeDriver_2.36\\chromedriver.exe");//"S:/ALL/CSRE/Grid/chromedriver.exe");
+			System.setProperty("webdriver.chrome.driver", "D:\\Selenium\\Selenium Driver Software\\chromedriver.exe");
+			//System.setProperty("webdriver.chrome.driver", System.getProperty("user.dir")+"\\drivers\\chromedriver.exe");
+		 	//ChromeOptions options = new ChromeOptions();		 	
+		 	//options.setBinary("C:/Program Files (x86)/Argus/RxNova.exe");
+		 	//options.setBinary("C:/Program Files (x86)/RxNova/RxNova.exe"); //Changed from Argus to RxNova for the latest version 181f
+		 	//options.addArguments("--start-maximized");		 	
+		 	//options.addArguments("--disable-dev-shm-usage");
+		 	//options.addArguments("--no-sandbox");
+		 	
+		 	driver = new ChromeDriver();//options	 	
+		 	//driver.get("https://argusprod-int.dstcorp.net/sso-web/logon.jsf"); 
+		 	driver.get("https://opensource-demo.orangehrmlive.com/"); // https://dev-web/sso-web/logon.jsf
+		 	// https://opensource-demo.orangehrmlive.com/
 		 	System.out.println(driver.getTitle());
 		 	driver.manage().timeouts().implicitlyWait(20, TimeUnit.SECONDS);
 		 	driver.manage().timeouts().pageLoadTimeout(60, TimeUnit.SECONDS);
+		 	driver.manage().window().maximize();
+            /*DesiredCapabilities cap = new DesiredCapabilities().chrome();
+            cap.setBrowserName("chrome");
+            cap.setPlatform(Platform.WINDOWS);
+            driver = new RemoteWebDriver(new URL(node_url),cap);*/
         }
-        setWebDriver(driver);        
+        setWebDriver(driver);
+        //getDriver().manage().window().maximize();        
         getDriver().manage().timeouts().pageLoadTimeout(500, TimeUnit.SECONDS);
         getDriver().manage().timeouts().implicitlyWait(40, TimeUnit.SECONDS);       
         LOGGER.info("-----------Initalized driver thread Running-------------");
 	}
+	
+
+//	@Before
+//	public void beforeTestScenario(Scenario scenario)
+//	{
+//	  System.out.println("-----------Running scenario ***"+ scenario.getName() +"***-------------");
+//	}
+	
 	public WebDriver getDriver()
 	{
 		return Tdriver.get();
@@ -76,6 +110,16 @@ public class SharedResource {
 		return LOGGER;
 	}
 
+//	@After
+//	public void afterTest(Scenario scenario)
+//	{		
+//		includeSnapshot(scenario);
+//		//System.out.println("-----------AfterTest Running-------------");
+//		//LOGGER.info("-----------AfterTest Running-------------");
+//		//getDriver().quit();
+//		//Tdriver.set(null);		
+//	}
+	
 	@After
 	public void afterTest(Scenario scenario)
 	{		
@@ -86,6 +130,7 @@ public class SharedResource {
 		//Tdriver.set(null);		
 	}	
 
+
 	public void includeSnapshot(Scenario scenario)
 	{
 		scenario.write("Completed Scenario");
@@ -94,4 +139,6 @@ public class SharedResource {
 			scenario.embed(((TakesScreenshot) ((Object) getDriver())).getScreenshotAs(OutputType.BYTES),"image/png");
 		}	
 	}
+	
+	
 }
