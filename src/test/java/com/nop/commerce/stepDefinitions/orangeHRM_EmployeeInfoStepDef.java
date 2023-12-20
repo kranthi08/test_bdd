@@ -1,18 +1,18 @@
 package com.nop.commerce.stepDefinitions;
 
 import com.nop.commerce.common.SharedResource;
-import com.nop.commerce.common.orangeHRM_Utlilty;
-import com.nop.commerce.steps.orangeHRM_LoginPage_Steps;
+import com.nop.commerce.common.nop_commerce_Utility;
+import com.nop.commerce.steps.LoginPage_Steps;
 
 import cucumber.api.java.en.Then;
 
 public class orangeHRM_EmployeeInfoStepDef 
 {
-	orangeHRM_LoginPage_Steps loginPageSteps;
+	LoginPage_Steps loginPageSteps;
 	SharedResource sharedResource;
-	orangeHRM_Utlilty utility;
+	nop_commerce_Utility utility;
 	
-	public orangeHRM_EmployeeInfoStepDef(SharedResource sharedResource,orangeHRM_Utlilty utility)
+	public orangeHRM_EmployeeInfoStepDef(SharedResource sharedResource,nop_commerce_Utility utility)
 	{
 		this.sharedResource = sharedResource;
 		this.utility = utility;

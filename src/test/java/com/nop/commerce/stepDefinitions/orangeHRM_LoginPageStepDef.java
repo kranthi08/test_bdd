@@ -3,8 +3,8 @@ package com.nop.commerce.stepDefinitions;
 import java.util.Map;
 
 import com.nop.commerce.common.SharedResource;
-import com.nop.commerce.common.orangeHRM_Utlilty;
-import com.nop.commerce.steps.orangeHRM_LoginPage_Steps;
+import com.nop.commerce.common.nop_commerce_Utility;
+import com.nop.commerce.steps.LoginPage_Steps;
 
 import cucumber.api.java.en.Given;
 import cucumber.api.java.en.Then;
@@ -12,11 +12,11 @@ import cucumber.api.java.en.When;
 
 public class orangeHRM_LoginPageStepDef 
 {
-	orangeHRM_LoginPage_Steps loginPageSteps;
+	LoginPage_Steps loginPageSteps;
 	SharedResource sharedResource;
-	orangeHRM_Utlilty utility;
+	nop_commerce_Utility utility;
 	
-	public orangeHRM_LoginPageStepDef(SharedResource sharedResource,orangeHRM_Utlilty utility)
+	public orangeHRM_LoginPageStepDef(SharedResource sharedResource,nop_commerce_Utility utility)
 	{
 		this.sharedResource = sharedResource;
 		this.utility = utility;
@@ -24,7 +24,7 @@ public class orangeHRM_LoginPageStepDef
 	}
 	public void init()
 	{
-		loginPageSteps = new orangeHRM_LoginPage_Steps(sharedResource,utility);
+		loginPageSteps = new LoginPage_Steps(sharedResource,utility);
 	}
 	
 	@When("User Launch the required OrangeHRM URL")
