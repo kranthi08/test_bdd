@@ -35,15 +35,5 @@ public class DashboardPage_Steps
 	public void clickOnCustomerListLink() throws Throwable {
 		selectorDashboardPage.click_on_customer_List_Link();
 	}
-	//==================================================================
-	
-	public void clickOnCatalogLink() throws Throwable {
-		selectorDashboardPage.click_on_Catalog_Link();
-	}
-	
-	public void clickOnProductsLink() throws Throwable {
-		selectorDashboardPage.click_on_Products_Link();
-	}
-	
 
 }
