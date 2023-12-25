@@ -4,7 +4,7 @@ import io.cucumber.testng.AbstractTestNGCucumberTests;
 import io.cucumber.testng.CucumberOptions;
 
 @CucumberOptions(
-		features = {"classpath:features/NewUserCreation.feature" },  
+		features = {"classpath:features/NewProductCreation.feature" },  
 			glue= {"classpath:com.nop.commerce.stepDefinitions",
 					"classpath:com.nop.commerce.common",
 					"classpath:com.nop.commerce.pages",
@@ -14,4 +14,4 @@ import io.cucumber.testng.CucumberOptions;
 		
 )
 
-public class NewUserCreation_TestRunner extends AbstractTestNGCucumberTests {}
+public class NewProductCreation_TestRunner extends AbstractTestNGCucumberTests {}
