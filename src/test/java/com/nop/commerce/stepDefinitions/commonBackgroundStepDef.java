@@ -4,7 +4,9 @@ import com.nop.commerce.common.SharedResource;
 import com.nop.commerce.common.Nop_Commerce_Utlilty;
 import com.nop.commerce.steps.LoginPage_Steps;
 
-import cucumber.api.java.en.When;
+import io.cucumber.java.en.When;
+
+
 
 public class commonBackgroundStepDef {
 

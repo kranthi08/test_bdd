@@ -14,6 +14,7 @@ public class DashboardPage {
 	WebDriver driver;
 	
 	private By dashBoard_Header_Text, customer_Link, customerList_Link;
+	private By Catalog_Link, Products_Link;
 	
 	public DashboardPage(SharedResource sharedResource, Nop_Commerce_Utlilty utils) {
 		
@@ -28,6 +29,8 @@ public class DashboardPage {
 		dashBoard_Header_Text = By.xpath("//div[@class='content-header']/h1");
 		customer_Link = By.xpath("//ul[@class='nav nav-pills nav-sidebar flex-column nav-legacy']/li[4]/a");
 		customerList_Link = By.xpath("//ul[@class='nav nav-pills nav-sidebar flex-column nav-legacy']/li[4]/ul/li/a");
+		Catalog_Link = By.xpath("//i[@class=\"nav-icon fas fa-book\"]");
+		Products_Link = By.xpath("//i[@class=\"nav-icon far fa-dot-circle\"]//following::p[1]");
 	}
 
 	public void user_is_in_dashboard_page()
@@ -53,7 +56,22 @@ public class DashboardPage {
 			utils.ClickOnLink(customerList_Link);
 		}
 	}
-
+	
+	public void click_on_Catalog_Link() throws Throwable
+	{
+		if(driver.findElement(Catalog_Link).isDisplayed()) {
+			System.out.println("Catalog Link displayed");
+			utils.ClickOnLink(Catalog_Link);
+		}
+	}
+	
+	public void click_on_Products_Link() throws Throwable
+	{
+		if(driver.findElement(Products_Link).isDisplayed()) {
+			System.out.println("Products Link displayed");
+			utils.ClickOnLink(Products_Link);
+		}
+	}
 
 
 
