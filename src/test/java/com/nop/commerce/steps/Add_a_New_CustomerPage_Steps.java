@@ -31,21 +31,13 @@ public class Add_a_New_CustomerPage_Steps {
 		addanewcustomerpage.setTextIntoDateOfBirthEdit("");
 		addanewcustomerpage.setTextIntoCompanyNameEdit("");
 		addanewcustomerpage.selectIsTaxExemptCheckBox();
-		addanewcustomerpage.clickOnNewsLetterEdit("");
-		addanewcustomerpage.SelectItemInNewsLetterDropDown("");
+		//addanewcustomerpage.clickOnNewsLetterEdit("");
+		//addanewcustomerpage.SelectItemInNewsLetterDropDown("");
 		addanewcustomerpage.clickOnCustomerRolesEdit("");
 		addanewcustomerpage.SelectItemInCustomerRolesDropDown("");
 		addanewcustomerpage.SelectItemInManagerOfVendorDropDown("");
 		addanewcustomerpage.selectActiveCheckBox();
 		addanewcustomerpage.setTextIntoAdminCommetEdit("");
 	}
-
-
-
-
-
-
-
-
 
 }
