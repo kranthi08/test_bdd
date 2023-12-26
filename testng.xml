@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd">
 <suite name="NOP_Commerce_Suite" parallel="classes">
   <test name="NewUserCreationFeature">
     <classes>
-      <class name="DSTPS.Automation.HybridDesktop.PharmacyLookupAutomation.runners.SearchPharmacyLookUpAndVerifySubmittedInformation_TestRunner"/>
+      <class name="com.nop.commerce.runners.NewUserCreation_TestRunner"/>
     </classes>
   </test>             
 </suite>
