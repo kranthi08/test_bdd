@@ -4,7 +4,6 @@ import java.io.FileInputStream;
 import java.io.IOException;
 import java.util.Properties;
 import java.util.concurrent.TimeUnit;
-
 import org.apache.commons.logging.Log;
 import org.apache.commons.logging.LogFactory;
 import org.openqa.selenium.OutputType;
@@ -13,14 +12,12 @@ import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.edge.EdgeDriver;
 import org.openqa.selenium.firefox.FirefoxDriver;
-
 import io.cucumber.java.After;
 import io.cucumber.java.Before;
 import io.cucumber.java.Scenario;
 
 
 public class SharedResource {
-	
 	private final static Log LOGGER = LogFactory.getLog(SharedResource.class);
 	public static ThreadLocal<WebDriver> Tdriver = new ThreadLocal<WebDriver>();
 	private static Properties pf = null;
@@ -33,14 +30,12 @@ public class SharedResource {
 		try{
 			if(!getDriver().toString().contains("null"))
 			{
-//				performLaunchAndLoginAgain=false;
 				return;				
 			}
 			
 		}catch(Exception e)
 		{
 			driver= null;
-//			performLaunchAndLoginAgain=true;
 			System.out.println("driver is set to null ");
 		}
 		String myBrowser =getProperties().getProperty("BrowserName");        
@@ -50,26 +45,26 @@ public class SharedResource {
 		driver=null;
 		switch(myBrowser.toLowerCase()) {
 		case "chrome":
-			System.setProperty("webdriver.chrome.driver", "C:\\selenium\\chromedriver.exe");
+			System.setProperty("webdriver.chrome.driver", getProperties().getProperty("ChromeDriverExePath"));
 		 	driver = new ChromeDriver();	 	
 		 	break;
 		case "firefox":
-			System.setProperty("webdriver.gecko.driver","C:\\selenium\\geckodriver.exe");
+			System.setProperty("webdriver.gecko.driver",getProperties().getProperty("FirefoxDriverExePath"));
 			driver = new FirefoxDriver();
 		 	break;
 		case "microsoftedge":
-			System.setProperty("webdriver.edge.driver", "C:\\selenium\\msedgedriver.exe");		
+			System.setProperty("webdriver.edge.driver", getProperties().getProperty("BrowserName"));		
 			driver = new EdgeDriver();
 		 	break;
 		default:
-			System.setProperty("webdriver.chrome.driver", "C:\\selenium\\chromedriver.exe");
+			System.setProperty("webdriver.chrome.driver", getProperties().getProperty("MicrosoftEdgeDriverExePath"));
 		 	driver = new ChromeDriver();	 	
 		 	break;
 		}
 		
         setWebDriver(driver);
         LOGGER.info("-----------Initalized driver thread Running-------------");
-	 	driver.get("https://admin-demo.nopcommerce.com/login");
+	 	driver.get(getProperties().getProperty("URL"));
 	 	System.out.println(driver.getTitle());
 	 	driver.manage().timeouts().implicitlyWait(20, TimeUnit.SECONDS);
 	 	driver.manage().timeouts().pageLoadTimeout(60, TimeUnit.SECONDS);

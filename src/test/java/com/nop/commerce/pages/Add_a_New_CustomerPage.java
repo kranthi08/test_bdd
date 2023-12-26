@@ -3,7 +3,6 @@ package com.nop.commerce.pages;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.support.ui.Select;
-
 import com.nop.commerce.common.SharedResource;
 import com.nop.commerce.common.Nop_Commerce_Utlilty;
 
@@ -23,6 +22,7 @@ public class Add_a_New_CustomerPage {
 		this.sharedResource = sharedResource;
 		this.utils = utils;
 		this.driver = sharedResource.getDriver();
+		
 		init_objects();
 	}
 	

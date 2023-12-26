@@ -1,5 +1,7 @@
 package com.nop.commerce.pages;
 
+import java.util.Properties;
+
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 
@@ -10,7 +12,7 @@ public class LoginPage {
 	
 	SharedResource sharedResource;
 	Nop_Commerce_Utlilty utils;
-	
+	Properties pf;
 	WebDriver driver;
 	
     private By admin_Area_Demo,userName_Edit,password_Edit,Login_button;
@@ -19,6 +21,7 @@ public class LoginPage {
 		this.sharedResource = sharedResource;
 		this.utils = utils;
 		this.driver = sharedResource.getDriver();
+		this.pf = sharedResource.getProperties();
 		init_objects();
 	}
 	
@@ -36,13 +39,13 @@ public class LoginPage {
 	}
 	
 	public void setUserName(String strUserName) throws Throwable{
-		if(driver.findElement(userName_Edit).isDisplayed()){
-			utils.SetTextOnEdit(userName_Edit, "admin@yourstore.com");
+		if(driver.findElement(userName_Edit).isDisplayed()&&strUserName.equals("")){
+			utils.SetTextOnEdit(userName_Edit, pf.getProperty("UserName"));
 		}
 	}
-	public void setPassword(String strpassword) throws Throwable{
-		if(driver.findElement(password_Edit).isDisplayed()){		
-			utils.SetTextOnEdit(password_Edit, "admin");
+	public void setPassword(String strPassword) throws Throwable{
+		if(driver.findElement(password_Edit).isDisplayed() && strPassword.equals("")){		
+			utils.SetTextOnEdit(password_Edit, pf.getProperty("Password"));
 		}
 	}
 	
