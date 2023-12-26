@@ -1,11 +1,7 @@
 package com.nop.commerce.pages;
 
-import java.util.List;
-
 import org.openqa.selenium.By;
-import org.openqa.selenium.JavascriptExecutor;
 import org.openqa.selenium.WebDriver;
-import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.ui.Select;
 
 import com.nop.commerce.common.SharedResource;
@@ -44,10 +40,9 @@ public class Add_a_New_CustomerPage {
 		newUser_CompanyName = By.id("Company");
 		newUser_IsTaxExempt = By.id("IsTaxExempt");
 		newUser_NewsLetter_Edit = By.xpath("//div[@class='k-multiselect-wrap k-floatwrap']");
-		//newUser_NewsLetter_DropDown = By.xpath("//select[@id='SelectedNewsletterSubscriptionStoreIds']");
-		newUser_NewsLetter_DropDown = By.xpath("//select[@id=\"SelectedNewsletterSubscriptionStoreIds\"]");
+		newUser_NewsLetter_DropDown = By.xpath("//select[@id='SelectedNewsletterSubscriptionStoreIds']");
 		newUser_CustomerRoles_Edit = By.xpath("(//div[@class='k-multiselect-wrap k-floatwrap'])[2]");
-		newUser_CustomerRoles_DropDown = By.xpath("//select[@id=\"SelectedCustomerRoleIds\"]");
+		newUser_CustomerRoles_DropDown = By.id("SelectedCustomerRoleIds");
 		newUser_ManagerOfVendor = By.id("VendorId");
 		newUser_Active = By.id("Active");
 		newUser_AdminComment = By.id("AdminComment");
@@ -126,38 +121,27 @@ public class Add_a_New_CustomerPage {
 	}
 	
 	// News Letter Edit
+	public void clickOnNewsLetterEdit(String strNewsLetter) throws Throwable {
+		if(driver.findElement(newUser_NewsLetter_Edit).isDisplayed()) {
+			driver.findElement(newUser_NewsLetter_Edit).click();
+			Thread.sleep(3000);
+		}
+	}
 	
-/*//	/*
-//	 * public void clickOnNewsLetterEdit(String strNewsLetter) throws Throwable {
-//	 * if(driver.findElement(newUser_NewsLetter_Edit).isDisplayed()) {
-//	 * 
-//	 * JavascriptExecutor jse = (JavascriptExecutor) driver;
-//	 * jse.executeScript("window.scrollBy(0,600)"); Thread.sleep(1000);
-//	 * driver.findElement(newUser_NewsLetter_Edit).click(); Thread.sleep(3000); } }
-//	 * 
-//	 * 
-//	 * // New Letter Drop down public void SelectItemInNewsLetterDropDown(String
-//	 * strNewsLetterToSelect) throws Throwable {
-//	 * if(driver.findElement(newUser_NewsLetter_DropDown).isDisplayed()) {
-//	 * System.out.println("newUser_NewsLetter_DropDown - Displayed");
-//	 * 
-//	 * Select newsletterDropdown = new
-//	 * Select(driver.findElement(newUser_NewsLetter_DropDown)); //List<WebElement>
-//	 * var = newsletterDropdown.getOptions(); //System.out.println(var);
-//	 * //newsletterDropdown.selectByVisibleText("Your store name");
-//	 * newsletterDropdown.selectByIndex(1); System.out.
-//	 * println("newUser_NewsLetter_DropDown - 'Your store name' item selected in drop down"
-//	 * ); Thread.sleep(5000); } }
-//	 
-*/
+	// New Letter Drop down
+	public void SelectItemInNewsLetterDropDown(String strNewsLetterToSelect) throws Throwable {
+		if(driver.findElement(newUser_NewsLetter_DropDown).isDisplayed()) {
+			System.out.println("newUser_NewsLetter_DropDown - Displayed");
+			Select newsletterDropdown = new Select(driver.findElement(newUser_NewsLetter_DropDown));
+			newsletterDropdown.selectByVisibleText("Your store name");
+			System.out.println("newUser_NewsLetter_DropDown - 'Your store name' item selected in drop down");
+			Thread.sleep(5000);
+		}
+	}
+
 	// Customer roles edit
 	public void clickOnCustomerRolesEdit(String strNewsLetter) throws Throwable {
 		if(driver.findElement(newUser_CustomerRoles_Edit).isDisplayed()) {
-			
-			JavascriptExecutor jse = (JavascriptExecutor) driver;
-			jse.executeScript("window.scrollBy(0,800)");  
-			Thread.sleep(10000);
-			//driver.findElement(newUser_CustomerRoles_Edit).clear();
 			driver.findElement(newUser_CustomerRoles_Edit).click();
 			Thread.sleep(5000);
 		}
@@ -166,7 +150,6 @@ public class Add_a_New_CustomerPage {
 	// Customer role selection
 	public void SelectItemInCustomerRolesDropDown(String strCustomerRoleToSelect) throws Throwable {
 		if(driver.findElement(newUser_CustomerRoles_DropDown).isDisplayed()) {
-			
 			Select customerRoleDropdown = new Select(driver.findElement(newUser_CustomerRoles_DropDown));
 			customerRoleDropdown.selectByVisibleText("Guests");
 			Thread.sleep(5000);

@@ -26,4 +26,13 @@ public class CustomersPage_Steps {
 		customersPage.clickOnAddNewCustomerButton();
 	}
 
+
+
+
+
+
+
+
+
+
 }

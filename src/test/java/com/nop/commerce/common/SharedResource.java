@@ -8,11 +8,9 @@ import org.openqa.selenium.OutputType;
 import org.openqa.selenium.TakesScreenshot;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
-
-import io.cucumber.java.After;
-import io.cucumber.java.Before;
-import io.cucumber.java.Scenario;
-
+import cucumber.api.Scenario;
+import cucumber.api.java.After;
+import cucumber.api.java.Before;
 
 public class SharedResource {
 	
@@ -44,7 +42,7 @@ public class SharedResource {
 		driver=null;
 		if(myBrowser.equals("chrome"))
 		{			
-			System.setProperty("webdriver.chrome.driver", "D:\\Selenium\\Softwares\\chromedriver\\chromedriver.exe");
+			System.setProperty("webdriver.chrome.driver", "C:\\selenium\\chromedriver.exe");
 		 	driver = new ChromeDriver();	 	
 		 	driver.get("https://admin-demo.nopcommerce.com/login");
 		 	System.out.println(driver.getTitle());
@@ -102,10 +100,10 @@ public class SharedResource {
 
 	public void includeSnapshot(Scenario scenario)
 	{
-		scenario.log("Completed Scenario");
+		scenario.write("Completed Scenario");
 		if(scenario.isFailed())
 		{
-			scenario.attach(((TakesScreenshot) ((Object) getDriver())).getScreenshotAs(OutputType.BYTES),"image/png","");
+			scenario.embed(((TakesScreenshot) ((Object) getDriver())).getScreenshotAs(OutputType.BYTES),"image/png");
 		}	
 	}
 	
