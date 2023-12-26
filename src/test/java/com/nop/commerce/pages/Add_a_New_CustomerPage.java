@@ -1,5 +1,6 @@
 package com.nop.commerce.pages;
 
+import org.apache.commons.lang.StringUtils;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.support.ui.Select;
@@ -56,29 +57,29 @@ public class Add_a_New_CustomerPage {
 	
 	//Email Edit
 	public void setTextIntoEmailEdit(String strEmailEditValue) throws Throwable {
-		if(driver.findElement(newUser_Email).isDisplayed()) {
-			utils.SetTextOnEdit(newUser_Email, "abc@google.com");
+		if(driver.findElement(newUser_Email).isDisplayed() && StringUtils.isNotBlank(strEmailEditValue)) {
+			utils.SetTextOnEdit(newUser_Email,strEmailEditValue ); // "abc@google.com"
 		}
 	}
 	
 	// Password Edit
 	public void setTextIntoPasswordEdit(String strPasswordEditValue) throws Throwable {
-		if(driver.findElement(newUser_Password).isDisplayed()) {
-			utils.SetTextOnEdit(newUser_Password, "abc@google1");
+		if(driver.findElement(newUser_Password).isDisplayed() && StringUtils.isNotBlank(strPasswordEditValue)) {
+			utils.SetTextOnEdit(newUser_Password,strPasswordEditValue  ); //"abc@google1"
 		}
 	}
 	
 	// First Name Edit
 	public void setTextIntoFirstNameEdit(String strFirstNameEditValue) throws Throwable {
-		if(driver.findElement(newUser_FirstName).isDisplayed()) {
-			utils.SetTextOnEdit(newUser_FirstName, "shafi");
+		if(driver.findElement(newUser_FirstName).isDisplayed() && StringUtils.isNotBlank(strFirstNameEditValue)) {
+			utils.SetTextOnEdit(newUser_FirstName,strFirstNameEditValue );//"shafi"
 		}
 	}
 	
 	// Last Name Edit
 	public void setTextIntoLastNameEdit(String strLastNameEditValue) throws Throwable {
-		if(driver.findElement(newUser_LastName).isDisplayed()) {
-			utils.SetTextOnEdit(newUser_LastName, "rafi");
+		if(driver.findElement(newUser_LastName).isDisplayed() && StringUtils.isNotBlank(strLastNameEditValue)) {
+			utils.SetTextOnEdit(newUser_LastName,strLastNameEditValue ); // "rafi"
 		}
 	}
 	
@@ -99,16 +100,16 @@ public class Add_a_New_CustomerPage {
 	
 	// Date of Birth Edit
 	public void setTextIntoDateOfBirthEdit(String strDateOfBirthEditValue) throws Throwable {
-		if(driver.findElement(newUser_DateOfBirth).isDisplayed()) {
-			driver.findElement(newUser_DateOfBirth).sendKeys("01/01/1980");
+		if(driver.findElement(newUser_DateOfBirth).isDisplayed() && StringUtils.isNotBlank(strDateOfBirthEditValue)) {
+			driver.findElement(newUser_DateOfBirth).sendKeys(strDateOfBirthEditValue);//"01/01/1980"
 			Thread.sleep(2000);
 		}
 	}
 
 	// Company Name Edit
 	public void setTextIntoCompanyNameEdit(String strCompanyNameEditValue) throws Throwable {
-		if(driver.findElement(newUser_CompanyName).isDisplayed()) {
-			driver.findElement(newUser_CompanyName).sendKeys("New Stock Board");
+		if(driver.findElement(newUser_CompanyName).isDisplayed() && StringUtils.isNotBlank(strCompanyNameEditValue)) {
+			driver.findElement(newUser_CompanyName).sendKeys(strCompanyNameEditValue); // "New Stock Board"
 			Thread.sleep(2000);
 		}
 	}
@@ -121,7 +122,7 @@ public class Add_a_New_CustomerPage {
 	}
 	
 	// News Letter Edit
-	public void clickOnNewsLetterEdit(String strNewsLetter) throws Throwable {
+	public void clickOnNewsLetterEdit() throws Throwable {
 		if(driver.findElement(newUser_NewsLetter_Edit).isDisplayed()) {
 			driver.findElement(newUser_NewsLetter_Edit).click();
 			Thread.sleep(3000);
@@ -130,7 +131,7 @@ public class Add_a_New_CustomerPage {
 	
 	// New Letter Drop down
 	public void SelectItemInNewsLetterDropDown(String strNewsLetterToSelect) throws Throwable {
-		if(driver.findElement(newUser_NewsLetter_DropDown).isDisplayed()) {
+		if(driver.findElement(newUser_NewsLetter_DropDown).isDisplayed() && StringUtils.isNotBlank(strNewsLetterToSelect)) {
 			System.out.println("newUser_NewsLetter_DropDown - Displayed");
 			Select newsletterDropdown = new Select(driver.findElement(newUser_NewsLetter_DropDown));
 			newsletterDropdown.selectByVisibleText("Your store name");
@@ -141,7 +142,7 @@ public class Add_a_New_CustomerPage {
 
 	// Customer roles edit
 	public void clickOnCustomerRolesEdit(String strNewsLetter) throws Throwable {
-		if(driver.findElement(newUser_CustomerRoles_Edit).isDisplayed()) {
+		if(driver.findElement(newUser_CustomerRoles_Edit).isDisplayed() && StringUtils.isNotBlank(strNewsLetter)) {
 			driver.findElement(newUser_CustomerRoles_Edit).click();
 			Thread.sleep(5000);
 		}
@@ -149,7 +150,7 @@ public class Add_a_New_CustomerPage {
 
 	// Customer role selection
 	public void SelectItemInCustomerRolesDropDown(String strCustomerRoleToSelect) throws Throwable {
-		if(driver.findElement(newUser_CustomerRoles_DropDown).isDisplayed()) {
+		if(driver.findElement(newUser_CustomerRoles_DropDown).isDisplayed() && StringUtils.isNotBlank(strCustomerRoleToSelect)) {
 			Select customerRoleDropdown = new Select(driver.findElement(newUser_CustomerRoles_DropDown));
 			customerRoleDropdown.selectByVisibleText("Guests");
 			Thread.sleep(5000);
@@ -157,7 +158,7 @@ public class Add_a_New_CustomerPage {
 	}
 	// Manager of Vendor selection
 	public void SelectItemInManagerOfVendorDropDown(String strManagerOfVendorToSelect) throws Throwable {
-		if(driver.findElement(newUser_ManagerOfVendor).isDisplayed()) {
+		if(driver.findElement(newUser_ManagerOfVendor).isDisplayed() && StringUtils.isNotBlank(strManagerOfVendorToSelect)) {
 			utils.SelectItemFromWebList(newUser_ManagerOfVendor, "Vendor 1");
 		}
 	}
@@ -171,7 +172,7 @@ public class Add_a_New_CustomerPage {
 	
 	// Admin Comment Edit
 	public void setTextIntoAdminCommetEdit(String strCompanyNameEditValue) throws Throwable {
-		if(driver.findElement(newUser_AdminComment).isDisplayed()) {
+		if(driver.findElement(newUser_AdminComment).isDisplayed() && StringUtils.isNotBlank(strCompanyNameEditValue)) {
 			utils.SetTextOnEdit(newUser_AdminComment, "No comment");
 		}
 	}
