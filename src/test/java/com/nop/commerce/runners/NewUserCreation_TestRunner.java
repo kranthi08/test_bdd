@@ -1,7 +1,7 @@
 package com.nop.commerce.runners;
 
-import cucumber.api.CucumberOptions;
-import cucumber.api.testng.AbstractTestNGCucumberTests;
+import io.cucumber.testng.AbstractTestNGCucumberTests;
+import io.cucumber.testng.CucumberOptions;
 
 @CucumberOptions(
 		features = {"classpath:features/NewUserCreation.feature" },  
@@ -10,8 +10,7 @@ import cucumber.api.testng.AbstractTestNGCucumberTests;
 					"classpath:com.nop.commerce.pages",
 					"classpath:com.nop.commerce.runners",
 					"classpath:com.nop.commerce.steps"},
-			plugin =  {"pretty","html:target/NOP/html", "json:target/NOP/NewUserCreation.json"},
-			strict=true
+			plugin =  {"pretty","html:target/NOP/html", "json:target/NOP/NewUserCreation.json"}
 )
 
 public class NewUserCreation_TestRunner extends AbstractTestNGCucumberTests {}

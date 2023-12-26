@@ -1,5 +1,8 @@
 package com.nop.commerce.common;
 
+import java.io.FileInputStream;
+import java.io.IOException;
+import java.util.Properties;
 import java.util.concurrent.TimeUnit;
 
 import org.apache.commons.logging.Log;
@@ -8,61 +11,71 @@ import org.openqa.selenium.OutputType;
 import org.openqa.selenium.TakesScreenshot;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
-import cucumber.api.Scenario;
-import cucumber.api.java.After;
-import cucumber.api.java.Before;
+import org.openqa.selenium.edge.EdgeDriver;
+import org.openqa.selenium.firefox.FirefoxDriver;
+
+import io.cucumber.java.After;
+import io.cucumber.java.Before;
+import io.cucumber.java.Scenario;
+
 
 public class SharedResource {
 	
 	private final static Log LOGGER = LogFactory.getLog(SharedResource.class);
-	public static ThreadLocal<WebDriver> Tdriver = new ThreadLocal<WebDriver>();	
-	public static boolean performLaunchAndLoginAgain;
+	public static ThreadLocal<WebDriver> Tdriver = new ThreadLocal<WebDriver>();
+	private static Properties pf = null;
 	
 	@Before
-	public void beforeTest(Scenario scenario)
+	public void beforeTest(Scenario scenario) throws IOException
 	{			
 		WebDriver driver;
+		ReadProp();
 		try{
 			if(!getDriver().toString().contains("null"))
 			{
-				performLaunchAndLoginAgain=false;
+//				performLaunchAndLoginAgain=false;
 				return;				
 			}
 			
 		}catch(Exception e)
 		{
 			driver= null;
-			performLaunchAndLoginAgain=true;
+//			performLaunchAndLoginAgain=true;
 			System.out.println("driver is set to null ");
 		}
-		String myBrowser ="chrome";        
+		String myBrowser =getProperties().getProperty("BrowserName");        
 		System.out.println("-----------***BeforeTest Running ***-------------");
 		System.out.println("-----------Running scenario ***"+ scenario.getName() +"***-------------");
 		LOGGER.info("-----------BeforeTest Running-------------");	
 		driver=null;
-		if(myBrowser.equals("chrome"))
-		{			
+		switch(myBrowser.toLowerCase()) {
+		case "chrome":
 			System.setProperty("webdriver.chrome.driver", "C:\\selenium\\chromedriver.exe");
 		 	driver = new ChromeDriver();	 	
-		 	driver.get("https://admin-demo.nopcommerce.com/login");
-		 	System.out.println(driver.getTitle());
-		 	driver.manage().timeouts().implicitlyWait(20, TimeUnit.SECONDS);
-		 	driver.manage().timeouts().pageLoadTimeout(60, TimeUnit.SECONDS);
-		 	driver.manage().window().maximize();
-        }
-        setWebDriver(driver);      
-        getDriver().manage().timeouts().pageLoadTimeout(500, TimeUnit.SECONDS);
-        getDriver().manage().timeouts().implicitlyWait(40, TimeUnit.SECONDS);       
+		 	break;
+		case "firefox":
+			System.setProperty("webdriver.gecko.driver","C:\\selenium\\geckodriver.exe");
+			driver = new FirefoxDriver();
+		 	break;
+		case "microsoftedge":
+			System.setProperty("webdriver.edge.driver", "C:\\selenium\\msedgedriver.exe");		
+			driver = new EdgeDriver();
+		 	break;
+		default:
+			System.setProperty("webdriver.chrome.driver", "C:\\selenium\\chromedriver.exe");
+		 	driver = new ChromeDriver();	 	
+		 	break;
+		}
+		
+        setWebDriver(driver);
         LOGGER.info("-----------Initalized driver thread Running-------------");
+	 	driver.get("https://admin-demo.nopcommerce.com/login");
+	 	System.out.println(driver.getTitle());
+	 	driver.manage().timeouts().implicitlyWait(20, TimeUnit.SECONDS);
+	 	driver.manage().timeouts().pageLoadTimeout(60, TimeUnit.SECONDS);
+	 	driver.manage().window().maximize();
 	}
-	
-
-//	@Before
-//	public void beforeTestScenario(Scenario scenario)
-//	{
-//	  System.out.println("-----------Running scenario ***"+ scenario.getName() +"***-------------");
-//	}
-	
+		
 	public WebDriver getDriver()
 	{
 		return Tdriver.get();
@@ -76,16 +89,6 @@ public class SharedResource {
 	{
 		return LOGGER;
 	}
-
-//	@After
-//	public void afterTest(Scenario scenario)
-//	{		
-//		includeSnapshot(scenario);
-//		//System.out.println("-----------AfterTest Running-------------");
-//		//LOGGER.info("-----------AfterTest Running-------------");
-//		//getDriver().quit();
-//		//Tdriver.set(null);		
-//	}
 	
 	@After
 	public void afterTest(Scenario scenario)
@@ -93,19 +96,30 @@ public class SharedResource {
 		includeSnapshot(scenario);
 		System.out.println("-----------AfterTest Running-------------");
 		LOGGER.info("-----------AfterTest Running-------------");
-		getDriver().quit();
-		//Tdriver.set(null);		
+		getDriver().quit();		
 	}	
-
 
 	public void includeSnapshot(Scenario scenario)
 	{
-		scenario.write("Completed Scenario");
+		scenario.log("Completed Scenario");
 		if(scenario.isFailed())
 		{
-			scenario.embed(((TakesScreenshot) ((Object) getDriver())).getScreenshotAs(OutputType.BYTES),"image/png");
+			scenario.attach(((TakesScreenshot) ((Object) getDriver())).getScreenshotAs(OutputType.BYTES),"image/png","");
 		}	
 	}
+	public void ReadProp() throws IOException
+	{
+		FileInputStream f1= new FileInputStream(System.getProperty("user.dir") + "\\src\\test\\resources\\config\\nop_commerce.properties");
+		if(pf==null) {
+			pf = new Properties();
+			pf.load(f1);
+		}
+		else {
+			pf.load(f1);
+		}
+	}
 	
-	
+	public Properties getProperties() {
+		return pf;
+	}
 }

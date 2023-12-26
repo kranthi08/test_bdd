@@ -31,16 +31,40 @@
 		</dependency>
 
 		<dependency>
-			<groupId>net.sourceforge.cobertura</groupId>
-			<artifactId>cobertura</artifactId>
-			<version>2.1.1</version>
-			<scope>test</scope>
+		    <groupId>io.cucumber</groupId>
+		    <artifactId>cucumber-core</artifactId>
+		    <version>7.15.0</version>
+		</dependency>
+		
+		<dependency>
+		    <groupId>io.cucumber</groupId>
+		    <artifactId>cucumber-java</artifactId>
+		    <version>7.15.0</version>
+		</dependency>
+		
+		<dependency>
+		    <groupId>io.cucumber</groupId>
+		    <artifactId>cucumber-picocontainer</artifactId>
+		    <version>7.15.0</version>
+		</dependency>
+		
+		<dependency>
+		    <groupId>io.cucumber</groupId>
+		    <artifactId>cucumber-jvm-deps</artifactId>
+		    <version>1.0.6</version>
+		    <scope>provided</scope>
 		</dependency>
 
 		<dependency>
-			<groupId>info.cukes</groupId>
-			<artifactId>cucumber-core</artifactId>
-			<version>1.2.5</version>
+		    <groupId>io.cucumber</groupId>
+		    <artifactId>gherkin</artifactId>
+		    <version>27.0.0</version>
+		</dependency>
+		
+		<dependency>
+		    <groupId>io.cucumber</groupId>
+		    <artifactId>cucumber-testng</artifactId>
+		    <version>7.15.0</version>
 		</dependency>
 
 		<dependency>
@@ -54,14 +78,6 @@
 			<artifactId>log4j-core</artifactId>
 			<version>2.10.0</version>
 		</dependency>
-
-		<dependency>
-			<groupId>info.cukes</groupId>
-			<artifactId>cucumber-java</artifactId>
-			<version>1.2.5</version>
-			<scope>test</scope>
-		</dependency>
-
 		
 		<dependency>
 			<groupId>org.apache.poi</groupId>
@@ -75,33 +91,10 @@
 			<version>1.18</version>
 		</dependency>
 
-	
-		<dependency>
-			<groupId>info.cukes</groupId>
-			<artifactId>cucumber-picocontainer</artifactId>
-			<version>1.2.5</version>
-			<scope>test</scope>
-		</dependency>
-
 		<dependency>
 			<groupId>net.masterthought</groupId>
 			<artifactId>cucumber-reporting</artifactId>
 			<version>3.12.0</version>
-			
-		</dependency>
-
-		<dependency>
-			<groupId>info.cukes</groupId>
-			<artifactId>cucumber-jvm-deps</artifactId>
-			<version>1.0.5</version>
-			<scope>provided</scope>
-		</dependency>
-
-		<dependency>
-			<groupId>info.cukes</groupId>
-			<artifactId>gherkin</artifactId>
-			<version>2.12.2</version>
-			<scope>provided</scope>
 		</dependency>
 
 		<dependency>
@@ -112,29 +105,11 @@
 		</dependency>
 
 		<dependency>
-			<groupId>info.cukes</groupId>
-			<artifactId>cucumber-testng</artifactId>
-			<version>1.2.5</version>
-			<exclusions>
-				<exclusion>
-					<groupId>junit</groupId>
-					<artifactId>junit</artifactId>
-				</exclusion>
-			</exclusions>
-		</dependency>
-		<dependency>
-			<groupId>info.cukes</groupId>
-			<artifactId>cucumber-java8</artifactId>
-			<version>1.2.5</version>
-			<scope>test</scope>
-		</dependency>
-
-		<dependency>
 			<groupId>com.sun</groupId>
 			<artifactId>tools</artifactId>
 			<version>1.6</version>
 			<scope>system</scope>
-			<systemPath>C:\Program Files (x86)\Java\jdk1.8.0_172\lib\tools.jar</systemPath>
+			<systemPath>C:\Program Files\Java\jdk-21\lib\jrt-fs.jar</systemPath>
 		</dependency>
 		
 		<dependency>
