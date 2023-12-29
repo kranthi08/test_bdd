@@ -5,5 +5,18 @@
     <classes>
       <class name="com.nop.commerce.runners.NewUserCreation_TestRunner"/>
     </classes>
+  </test>
+  
+    <test name="NewProductCreationFeature">
+    <classes>
+      <class name="com.nop.commerce.runners.NewProductCreation_TestRunner"/>
+    </classes>
   </test>             
+  
+    <test name="LoginPage_UI_ValidationFeature">
+    <classes>
+      <class name="com.nop.commerce.runners.LoginPage_UI_Validation_TestRunner"/>
+    </classes>
+  </test>             
+               
 </suite>

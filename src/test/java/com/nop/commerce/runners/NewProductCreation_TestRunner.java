@@ -10,7 +10,9 @@ import io.cucumber.testng.CucumberOptions;
 					"classpath:com.nop.commerce.pages",
 					"classpath:com.nop.commerce.runners",
 					"classpath:com.nop.commerce.steps"},
-		plugin= {"pretty","html:target/Cucumber-html-report","json:target/cucumber-reports/Login.json","rerun:src/test/resources/rerun.txt"}
+		plugin= {"pretty","html:target/NOP/NewProductCreation", "json:target/NOP/NewProductCreation.json",
+				   "com.aventstack.extentreports.cucumber.adapter.ExtentCucumberAdapter:"
+				}
 		
 )
 

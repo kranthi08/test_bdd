@@ -24,8 +24,7 @@ import com.nop.commerce.pages.LoginPage;
 		
 		//==================================================================
 		
-		public void the_user_is_in_application() throws Throwable 
-		{
+		public void the_user_is_in_application() throws Throwable {
 			selectorLoginpage.user_is_in_application_home_page();
 		}
 			
@@ -34,6 +33,33 @@ import com.nop.commerce.pages.LoginPage;
 			selectorLoginpage.setPassword("");
 			selectorLoginpage.clickOnLoginButton();
 		}
-
+		
+		public void validate_admin_area_demo() throws Throwable {
+			selectorLoginpage.validate_label_admin_Area_Demo_text();
+		}
+		
+		public void validate_welcome_please_sign_in() throws Throwable {
+			selectorLoginpage.validate_label_welcome_please_signin_title();
+		}
+		
+		public void validate_email() throws Throwable {
+			selectorLoginpage.validate_label_email();
+		}
+		
+		public void validate_password() throws Throwable {
+			selectorLoginpage.validate_label_password();
+		}
+		
+		public void validate_rememberMe_label() throws Throwable {
+			selectorLoginpage.validate_label_Remember_Me_Text();
+		}
+		
+		public void validate_rememberMe_checkbox() throws Throwable {
+			selectorLoginpage.validate_checkbox_RememberMe();
+		}
+		
+		public void validate_defaults_for_admin_area() throws Throwable {
+			selectorLoginpage.validate_label_defaults_for_admin_area_Text();
+		}
 
 }
