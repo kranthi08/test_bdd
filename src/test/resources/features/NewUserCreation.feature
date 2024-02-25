@@ -6,7 +6,14 @@ Feature: Verify the functionality of new user creation in NOP commerce Applicati
   Background: 
 		When User perform login in nop commerce application
 
-	Scenario: Verify SignIn functionality with credentials
+	Scenario Outline: Verify SignIn functionality with credentials
 	  Given User is in dashboard page of NOP commerce application
 		When User click on customer link and create new customer
+				| TestcaseID   | 
+				| <TestcaseID> |
 		Then User verify the created customer
+		
+		Examples: 
+			| TestcaseID 		 |
+			| user_creation1 |
+		

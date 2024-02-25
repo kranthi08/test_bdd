@@ -1,6 +1,9 @@
 package com.nop.commerce.stepDefinitions;
 
 import com.nop.commerce.common.SharedResource;
+
+import java.util.List;
+
 import com.nop.commerce.common.Nop_Commerce_Utlilty;
 import com.nop.commerce.steps.Add_a_New_CustomerPage_Steps;
 import com.nop.commerce.steps.Add_a_New_Product_Page_Steps;
@@ -8,6 +11,7 @@ import com.nop.commerce.steps.CustomersPage_Steps;
 import com.nop.commerce.steps.DashboardPage_Steps;
 import com.nop.commerce.steps.Productspage_Steps;
 
+import io.cucumber.datatable.DataTable;
 import io.cucumber.java.en.Given;
 import io.cucumber.java.en.Then;
 import io.cucumber.java.en.When;
@@ -44,11 +48,13 @@ public class DashboardPageStepDef {
 	}
 	
 	@When("^User click on customer link and create new customer$")
-	public void user_click_on_customer_link_and_create_new_customer() throws Throwable {
+	public void user_click_on_customer_link_and_create_new_customer(DataTable datarows) throws Throwable {
+		List<List<String>> testData=  datarows.asLists();
+		String strtestcaeID = testData.get(1).get(0);
 		dashBoardPageSteps.clickOnCustomersLink();
 		dashBoardPageSteps.clickOnCustomerListLink();
 		customerspagesteps.navidateToAddaCustomerPage();
-		addanewcustomerpagesteps.inputAllTheRequiredValuesForNewUserCreation();
+		addanewcustomerpagesteps.inputAllTheRequiredValuesForNewUserCreation(strtestcaeID);
 	}
 	
 	@Then("^User verify the created customer$")

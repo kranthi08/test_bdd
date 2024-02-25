@@ -29,8 +29,8 @@ public class Add_a_New_CustomerPage_Steps {
 		addanewcustomerpage = new Add_a_New_CustomerPage(sharedResource,utils);
 	}
 	
-	public void inputAllTheRequiredValuesForNewUserCreation() throws Throwable {
-		testDataMap = getTestDataFromExcelFile();
+	public void inputAllTheRequiredValuesForNewUserCreation(String strtestcaeID) throws Throwable {
+		testDataMap = getTestDataFromExcelFile(strtestcaeID);
 		
 		addanewcustomerpage.userIsInAddaNewCustomerPage();
 		addanewcustomerpage.setTextIntoEmailEdit(testDataMap.get("EmailEdit"));
@@ -63,16 +63,7 @@ public class Add_a_New_CustomerPage_Steps {
 		addanewcustomerpage.setTextIntoAdminCommetEdit(testDataMap.get("newUser_AdminComment"));
 	}
 	
-	public Map<String,String> getTestDataFromExcelFile() throws Throwable{
-		return ExcelHelper.getTestDataInMap(strTestDataFilePath, "nop_commerce", "user_creation1"); 
+	public Map<String,String> getTestDataFromExcelFile(String strtestcaeID) throws Throwable{
+		return ExcelHelper.getTestDataInMap(strTestDataFilePath, "nop_commerce",strtestcaeID); 
 	}
-
-
-
-
-
-
-
-
-
 }
